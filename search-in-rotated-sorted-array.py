@@ -70,3 +70,5 @@ class Solution(object):
                 #check l~m-1
                 r = m-1
                 continue
+
+            return -1
