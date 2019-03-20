@@ -1,15 +1,14 @@
+"""
+findPalindorome() find the palindrone string from the center "mid"
+The center could be one char (case 1) or two the same char (case 2)
+We iterate through every char in string and assume it is the center
+And put it in findPalindorome() to find the longest
+
+Time Efficiency: O(N^2)
+Space Efficiency: O(N)
+"""
 class Solution(object):
     def longestPalindrome(self, s):
-
-        """
-        findPalindorome() find the palindrone string from the center "mid"
-        The center could be one char (case 1) or two the same char (case 2)
-        We iterate through every char in string and assume it is the center
-        And put it in findPalindorome() to find the longest
-
-        Time Efficiency: O(N^2)
-        Space Efficiency: O(N)
-        """
         def findPalindorome(mid, mid2=None):
             r = 0
             l = len(s)
@@ -42,5 +41,9 @@ class Solution(object):
             max_pal = p2 if len(p2)>len(max_pal) else max_pal
             
         return max_pal
-
+"""
+I really take time to explain my solution, because I wanted to help people understand.
+If you like my answer, a star on GitHub I will really appreciated.
+https://github.com/wuduhren/leetcode-python
+"""
         
