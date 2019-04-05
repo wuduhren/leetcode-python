@@ -52,8 +52,4 @@ class Solution(object):
                     heapq.heappush(pq, (d+d2, nb)) #[2]
                     
         return max(dis.values()) if len(dis)==N else -1 #[5]
-"""
-I really take some time to explain my solution, because I wanted to help people understand.
-If you like my answer, a star on GitHub I will really appreciated.
-https://github.com/wuduhren/leetcode-python
-"""
+

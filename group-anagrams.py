@@ -12,9 +12,3 @@ class Solution(object):
             dic[tuple(string_count)].append(string)
         
         return dic.values()
-
-"""
-I really take time to make the best solution, because I wanted to help people understand.
-If you like my answer, a star on GitHub I will really appreciated.
-https://github.com/wuduhren/leetcode-
-"""

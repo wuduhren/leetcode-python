@@ -20,8 +20,3 @@ class Solution(object):
         
         return x
 
-"""
-I really take time to explain my solution, because I wanted to help people understand.
-If you like my answer, a star on GitHub I will really appreciated.
-https://github.com/wuduhren/leetcode-python
-"""
