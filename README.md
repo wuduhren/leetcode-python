@@ -4,11 +4,9 @@
 2. I really take time tried to make the best solution or explaination. 
 Because I wanted to help others like me. 
 If you like my answer, a star on GitHub means a lot to me. 
-https://github.com/wuduhren/leetcode-python>
+https://github.com/wuduhren/leetcode-python
 
-3. The question is at `https://leetcode.com/problems/the-file-name/`.
-
-	For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
+3. The question is at `https://leetcode.com/problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 # Really Great Resources
 ## System Design
