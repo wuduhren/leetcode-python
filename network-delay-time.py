@@ -17,17 +17,17 @@ for time complexity
 we use O(E) to make an adjacency list from edge list.
 we will go through the while loop V-1 times because we need to determined the distance of V-1 other nodes.
 for every loop 
-    we need O(logV) to get the nearest node, bc we pop from priority queue.
-    we go push the node the priority queue d times (which is the depth of every node)
-    push the node takes O(logV), we assume all the node is in the queue.
-    so every loop we use O(d*logV+logV)~=O(d*logV)
-so total for total, it is O((V-1)*(d*logV))+O(E), we know that V-1~=V and V*d=E
-so it is O(ElogV)+O(E)~=O(ElogV)
+    we pop from priority queue (here need O(logE) to get the nearest node).
+    we push the node's neighbor to the priority queue d times (which is the degree of the node)
+    push the node takes O(logE), we assume all the node is in the queue.
+    so every loop we use O(d*logE+logE)~=O(d*logE)
+so total for total, it is O((V-1)*(d*logE))+O(E), we know that V-1~=V and V*d=E
+so it is O(ElogE)+O(E)~=O(ElogE)
 E is the number of edges, which is the length of 'times' of the input
 V is the number of node, which is the 'N' of the inout
 
 for space complexity
-we used O(V) in both the 'dis' and 'pq', and O(E) on the adjacency list.
+we used O(V) and O(E) in 'dis' and 'pq', and O(E) on the adjacency list.
 so, it is O(V+E).
 """
 class Solution(object):

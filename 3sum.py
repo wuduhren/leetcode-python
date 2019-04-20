@@ -24,6 +24,18 @@ class Solution(object):
 	We do not need to consider i after nums[i]>0, since sum of 3 positive will be always greater than zero. [7]
 	We do not need to try the last two, since there are no rooms for l and r pointers.
 	You can think of it as The last two have been tried by all others. [8]
+
+	For time complexity
+	Sorting takes O(NlogN)
+	Now, we need to think as if the 'nums' is really really big
+	We iterate through the 'nums' once, and each time we iterate the whole array again by a while loop
+	So it is O(NlogN+N^2)~=O(N^2)
+
+	For space complexity
+	We didn't use extra space except the 'res'
+	Since we may store the whole 'nums' in it
+	So it is O(N)
+	N is the length of 'nums'
 	"""
 
 	def threeSum(self, nums):
