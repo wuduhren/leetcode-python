@@ -14,7 +14,7 @@ class Solution(object):
         	if i==0:
         		K[i] = nums[0]
         	elif i==1:
-        		K[i] = max(nums[0], nums[1])
+        		K[i] = nums[0]
         	elif i==len(nums)-1:
         		K[i] = K[i-1]
         	else:
