@@ -1,5 +1,5 @@
 # Leetcode Python Solution
-1. This is my Python solution on Leetcode. The question is at `https://leetcode.com/problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
+1. This is my Python solution on Leetcode. The question is at `problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 2. I really take time tried to make the best solution or explaination. 
 Because I wanted to help others like me. 
@@ -10,7 +10,7 @@ https://github.com/wuduhren/leetcode-python
 These are the interview resources I personally used and only if it is really helpful I will put it here.
 
 ## Overall Mindset
-Haveing a right mindset is the most important resource. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
+Haveing a right mindset is the most important one. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
 
 This is a speech from Sean Lee on "How to Get a Job at the Big 4". I highly recommend this because it gives me the right mindset on how to put in the work.  
 <https://youtu.be/YJZCUhxNCv8>
