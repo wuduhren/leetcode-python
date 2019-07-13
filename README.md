@@ -23,6 +23,9 @@ CS DoJo on "How I Got a Job at Google as a Software Engineer". There are also lo
 2. <https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade>
 3. <https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade>
 
+## Resume
+<https://drive.google.com/file/d/10b9NZDhPbUOW_C7108IKe9ev6Ed2UG7F/view>
+
 ## Data Structure and Algorithm Basics
 Basic data structure and algorithm online course taught in Python. This course is design to help you find job and do well in the interview.  
 <https://classroom.udacity.com/courses/ud513>
