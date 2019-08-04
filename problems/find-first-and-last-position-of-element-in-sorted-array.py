@@ -9,6 +9,8 @@ If the target is not in the `nums` the pointer `p` will stop moving. `return [-1
 Second, we move pointers, `l`, `r` to find the right-most and left-most targets.
 
 The time complexity is O(LogN), becuase we use the concept of binary search to find the `target`.
+
+Another solution is to use [bisect](https://docs.python.org/2.7/library/bisect.html).
 """
 class Solution(object):
     def searchRange(self, nums, target):
@@ -33,3 +35,16 @@ class Solution(object):
         while 0<=l-1 and nums[l-1]==target:
             l = l-1
         return [l, r]
+
+
+import bisect
+class Solution(object):
+    def searchRange(self, nums, target):
+        if nums is None or len(nums)==0: return [-1, -1]
+        if target<nums[0] or nums[-1]<target: return [-1, -1] #check if target out of range
+        l = bisect.bisect_left(nums, target)
+        r = bisect.bisect_right(nums, target)
+
+        if nums[l]!=target or nums[r-1]!=target: return [-1, -1] #check if target in `nums`
+        return [l, r-1]
+

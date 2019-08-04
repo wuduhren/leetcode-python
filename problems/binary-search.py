@@ -9,6 +9,8 @@ If the value at `p` is smaller than the target, we search the right-half by `l =
 Continue this proccess, until we find the value.
 
 If we can't find the value, then `l` and `r` are going to collapse. `return -1`
+
+Another solution is to use [bisect](https://docs.python.org/2.7/library/bisect.html).
 """
 class Solution(object):
     def search(self, nums, target):
@@ -28,3 +30,15 @@ class Solution(object):
             else:
                 l = p+1
         return -1
+
+import bisect
+class Solution(object):
+    def search(self, nums, target):
+        if nums is None or len(nums)==0: return -1
+        if target<nums[0] or nums[-1]<target: return -1 #check if out of range
+
+        i = bisect.bisect_left(nums, target)
+
+        #check if target in `nums`
+        if nums[i]==target: return i
+        else: return -1
