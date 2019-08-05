@@ -8,6 +8,7 @@ https://github.com/wuduhren/leetcode-python
 
 # Roadmap
 ## Search
+
 <table>
     <tr>
         <th>ID</th>
