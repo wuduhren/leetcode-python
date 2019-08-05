@@ -7,6 +7,7 @@ If you like my answer, a star on GitHub means a lot to me.
 https://github.com/wuduhren/leetcode-python
 
 # Roadmap
+## Search
 <style>
     .hard {
         color: #d9534f;
@@ -18,7 +19,6 @@ https://github.com/wuduhren/leetcode-python
         color: #5cb85c;
     }
 </style>
-## Search
 <table>
 <thead>
     <tr>
