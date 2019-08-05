@@ -6,6 +6,147 @@ Because I wanted to help others like me.
 If you like my answer, a star on GitHub means a lot to me. 
 https://github.com/wuduhren/leetcode-python
 
+# Roadmap
+<style>
+    .hard {
+        color: #d9534f;
+    }
+    .medium {
+        color: #f0ad4e;
+    }
+    .easy {
+        color: #5cb85c;
+    }
+</style>
+## Search
+<table>
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Difficulty</th>
+        <th>Remarks</th>
+        <th colspan="7">Similar Problems</th>
+    <tr>
+</thead>
+<tbody>
+    <tr>
+        <td>17</td>
+        <td class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</td>
+        <td>★★</td>
+        <td>Combination</td>
+
+        <td class="medium" href="https://leetcode.com/problems/combination-sum/">39</td>
+        <td class="medium" href="https://leetcode.com/problems/combination-sum-ii/">40</td>
+        <td class="medium" href="https://leetcode.com/problems/combinations/">77</td>
+        <td class="medium" href="https://leetcode.com/problems/subsets/">78</td>
+        <td class="medium" href="https://leetcode.com/problems/subsets-ii/">90</td>
+        <td class="medium" href="https://leetcode.com/problems/combination-sum-iii/">216</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>46</td>
+        <td class="medium" href="https://leetcode.com/problems/permutations/">Permutations</td>
+        <td>★★</td>
+        <td>Permutation</td>
+
+        <td class="medium" href="https://leetcode.com/problems/permutations-ii/">47</td>
+        <td class="medium" href="https://leetcode.com/problems/letter-case-permutation/">784</td>
+        <td class="easy" href="https://leetcode.com/problems/find-the-shortest-superstring">943</td>
+        <td class="hard" href="https://leetcode.com/problems/number-of-squareful-arrays/">996</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td class="medium" href="https://leetcode.com/problems/generate-parentheses/">Generate Parentheses</td>
+        <td>★★★</td>
+        <td>DFS</td>
+
+        <td class="hard" href="https://leetcode.com/problems/remove-invalid-parentheses/">301</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td class="hard" href="https://leetcode.com/problems/sudoku-solver">Sudoku Solver</td>
+        <td>★★★</td>
+        <td>DFS</td>
+
+        <td class="medium" href="https://leetcode.com/problems/n-queens">51</td>
+        <td class="medium" href="https://leetcode.com/problems/n-queens-ii">52</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>79</td>
+        <td class="medium" href="https://leetcode.com/problems/permutations/">xxxxxxxxx</td>
+        <td>★★★</td>
+        <td>DFS</td>
+
+        <td class="hard" href="https://leetcode.com/problems/word-search-ii/submissions/">212</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>127</td>
+        <td class="medium" href="https://leetcode.com/problems/word-ladder/">Word Ladder</td>
+        <td>★★★★</td>
+        <td>BFS</td>
+
+        <td class="hard" href="https://leetcode.com/problems/word-ladder-ii/">126</td>
+        <td class="medium" href="https://leetcode.com/problems/open-the-lock/">752</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>542</td>
+        <td class="medium" href="https://leetcode.com/problems/01-matrix/">01 Matrix</td>
+        <td>★★★</td>
+        <td>BFS</td>
+
+        <td class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</td>
+        <td class="medium" href="https://leetcode.com/problems/shortest-bridge/">934</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>698</td>
+        <td class="medium" href="https://leetcode.com/problems/01-matrix/">Partition to K Equal Sum Subsets</td>
+        <td>★★★</td>
+        <td>Partition</td>
+
+        <td class="medium" href="https://leetcode.com/problems/restore-ip-addresses/">93</td>
+        <td class="medium" href="https://leetcode.com/problems/palindrome-partitioning/">131</td>
+        <td class="medium" href="https://leetcode.com/problems/different-ways-to-add-parentheses/">241</td>
+        <td class="hard" href="https://leetcode.com/problems/expression-add-operators/">282</td>
+        <td class="medium" href="https://leetcode.com/problems/split-array-into-fibonacci-sequence/">842</td>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody>
+</table>
+
+**To be continued...*
+
 # Resources
 These are the interview resources I personally used and only if it is really helpful I will put it here.
 
@@ -38,7 +179,9 @@ More resource
 Architecture 101  
 <https://engineering.videoblocks.com/web-architecture-101-a3224e126947>  
 How to scale up? There are also lots of tech interview related topic in his channel.  
-<https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s>
+<https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s>  
+Narendra talks about many system design.
+<https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists>
 
 ## Interview Question Survey
 <https://www.glassdoor.com/index.htm>  
