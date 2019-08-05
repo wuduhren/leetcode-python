@@ -19,49 +19,51 @@ https://github.com/wuduhren/leetcode-python
         color: #5cb85c;
     }
 </style>
+
 <table>
+<thead>
     <tr>
         <td>ID</td>
         <td>Name</td>
         <td>Difficulty</td>
         <td>Remarks</td>
         <td colspan="7">Similar Problems</td>
-    </tr>
+    <tr>
+</thead>
+<tbody>
     <tr>
         <td>17</td>
-        <td class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</td>
+        <td><span class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</span></td>
         <td>★★</td>
         <td>Combination</td>
 
-        <td class="medium" href="https://leetcode.com/problems/combination-sum/">39</td>
-        <td class="medium" href="https://leetcode.com/problems/combination-sum-ii/">40</td>
-        <td class="medium" href="https://leetcode.com/problems/combinations/">77</td>
-        <td class="medium" href="https://leetcode.com/problems/subsets/">78</td>
-        <td class="medium" href="https://leetcode.com/problems/subsets-ii/">90</td>
-        <td class="medium" href="https://leetcode.com/problems/combination-sum-iii/">216</td>
-        <td></td>
+        <td><span class="medium" href="https://leetcode.com/problems/combination-sum/">39</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/combination-sum-ii/">40</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/combinations/">77</span>></td>
+        <td><span class="medium" href="https://leetcode.com/problems/subsets/">78</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/subsets-ii/">90</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/combination-sum-iii/">216</span></td>
     </tr>
     <tr>
         <td>46</td>
-        <td class="medium" href="https://leetcode.com/problems/permutations/">Permutations</td>
+        <td><span class="medium" href="https://leetcode.com/problems/permutations/">Permutations</span></td>
         <td>★★</td>
         <td>Permutation</td>
 
-        <td class="medium" href="https://leetcode.com/problems/permutations-ii/">47</td>
-        <td class="medium" href="https://leetcode.com/problems/letter-case-permutation/">784</td>
-        <td class="easy" href="https://leetcode.com/problems/find-the-shortest-superstring">943</td>
-        <td class="hard" href="https://leetcode.com/problems/number-of-squareful-arrays/">996</td>
-        <td></td>
+        <td><span class="medium" href="https://leetcode.com/problems/permutations-ii/">47</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/letter-case-permutation/">784</span></td>
+        <td><span class="easy" href="https://leetcode.com/problems/find-the-shortest-superstring">943</span></td>
+        <td><span class="hard" href="https://leetcode.com/problems/number-of-squareful-arrays/">996</span></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>22</td>
-        <td class="medium" href="https://leetcode.com/problems/generate-parentheses/">Generate Parentheses</td>
+        <td><span class="medium" href="https://leetcode.com/problems/generate-parentheses/">Generate Parentheses</span></td>
         <td>★★★</td>
         <td>DFS</td>
 
-        <td class="hard" href="https://leetcode.com/problems/remove-invalid-parentheses/">301</td>
+        <td><span class="hard" href="https://leetcode.com/problems/remove-invalid-parentheses/">301</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -71,12 +73,12 @@ https://github.com/wuduhren/leetcode-python
     </tr>
     <tr>
         <td>37</td>
-        <td class="hard" href="https://leetcode.com/problems/sudoku-solver">Sudoku Solver</td>
+        <td><span class="hard" href="https://leetcode.com/problems/sudoku-solver">Sudoku Solver</span></td>
         <td>★★★</td>
         <td>DFS</td>
 
-        <td class="medium" href="https://leetcode.com/problems/n-queens">51</td>
-        <td class="medium" href="https://leetcode.com/problems/n-queens-ii">52</td>
+        <td><span class="medium" href="https://leetcode.com/problems/n-queens">51</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/n-queens-ii">52</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -85,7 +87,7 @@ https://github.com/wuduhren/leetcode-python
     </tr>
     <tr>
         <td>79</td>
-        <td class="medium" href="https://leetcode.com/problems/permutations/">xxxxxxxxx</td>
+        <td><span class="medium" href="https://leetcode.com/problems/word-search/">Word Search</td>
         <td>★★★</td>
         <td>DFS</td>
 
@@ -99,12 +101,12 @@ https://github.com/wuduhren/leetcode-python
     </tr>
     <tr>
         <td>127</td>
-        <td class="medium" href="https://leetcode.com/problems/word-ladder/">Word Ladder</td>
+        <td><span class="medium" href="https://leetcode.com/problems/word-ladder/">Word Ladder</span></td>
         <td>★★★★</td>
         <td>BFS</td>
 
-        <td class="hard" href="https://leetcode.com/problems/word-ladder-ii/">126</td>
-        <td class="medium" href="https://leetcode.com/problems/open-the-lock/">752</td>
+        <td><span class="hard" href="https://leetcode.com/problems/word-ladder-ii/">126</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/open-the-lock/">752</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -113,12 +115,12 @@ https://github.com/wuduhren/leetcode-python
     </tr>
     <tr>
         <td>542</td>
-        <td class="medium" href="https://leetcode.com/problems/01-matrix/">01 Matrix</td>
+        <td><span class="medium" href="https://leetcode.com/problems/01-matrix/">01 Matrix</span></td>
         <td>★★★</td>
         <td>BFS</td>
 
-        <td class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</td>
-        <td class="medium" href="https://leetcode.com/problems/shortest-bridge/">934</td>
+        <td><<span class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/shortest-bridge/">934</span></td>
         <td></td>
         <td></td>
         <td></td>
@@ -127,18 +129,19 @@ https://github.com/wuduhren/leetcode-python
     </tr>
     <tr>
         <td>698</td>
-        <td class="medium" href="https://leetcode.com/problems/01-matrix/">Partition to K Equal Sum Subsets</td>
+        <td><span class="medium" href="https://leetcode.com/problems/01-matrix/">Partition to K Equal Sum Subsets</span></td>
         <td>★★★</td>
         <td>Partition</td>
 
-        <td class="medium" href="https://leetcode.com/problems/restore-ip-addresses/">93</td>
-        <td class="medium" href="https://leetcode.com/problems/palindrome-partitioning/">131</td>
-        <td class="medium" href="https://leetcode.com/problems/different-ways-to-add-parentheses/">241</td>
-        <td class="hard" href="https://leetcode.com/problems/expression-add-operators/">282</td>
-        <td class="medium" href="https://leetcode.com/problems/split-array-into-fibonacci-sequence/">842</td>
+        <td><span class="medium" href="https://leetcode.com/problems/restore-ip-addresses/">93</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/palindrome-partitioning/">131</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/different-ways-to-add-parentheses/">241</span></td>
+        <td><span class="hard" href="https://leetcode.com/problems/expression-add-operators/">282</span></td>
+        <td><span class="medium" href="https://leetcode.com/problems/split-array-into-fibonacci-sequence/">842</span></td>
         <td></td>
         <td></td>
     </tr>
+</tbody>
 </table>
 
 
