@@ -20,7 +20,6 @@ https://github.com/wuduhren/leetcode-python
     }
 </style>
 <table>
-<thead>
     <tr>
         <th>ID</th>
         <th>Name</th>
@@ -28,8 +27,6 @@ https://github.com/wuduhren/leetcode-python
         <th>Remarks</th>
         <th colspan="7">Similar Problems</th>
     <tr>
-</thead>
-<tbody>
     <tr>
         <td>17</td>
         <td class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</td>
@@ -142,7 +139,6 @@ https://github.com/wuduhren/leetcode-python
         <td></td>
         <td></td>
     </tr>
-</tbody>
 </table>
 
 **To be continued...*
