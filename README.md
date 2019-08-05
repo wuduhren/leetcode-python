@@ -8,14 +8,24 @@ https://github.com/wuduhren/leetcode-python
 
 # Roadmap
 ## Search
-
+<style>
+    .hard {
+        color: #d9534f;
+    }
+    .medium {
+        color: #f0ad4e;
+    }
+    .easy {
+        color: #5cb85c;
+    }
+</style>
 <table>
     <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Difficulty</th>
-        <th>Remarks</th>
-        <th colspan="7">Similar Problems</th>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Difficulty</td>
+        <td>Remarks</td>
+        <td colspan="7">Similar Problems</td>
     <tr>
     <tr>
         <td>17</td>
