@@ -26,7 +26,7 @@ https://github.com/wuduhren/leetcode-python
         <td>Difficulty</td>
         <td>Remarks</td>
         <td colspan="7">Similar Problems</td>
-    <tr>
+    </tr>
     <tr>
         <td>17</td>
         <td class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</td>
