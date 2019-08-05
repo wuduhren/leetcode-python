@@ -6,8 +6,8 @@ Because I wanted to help others like me.
 If you like my answer, a star on GitHub means a lot to me. 
 https://github.com/wuduhren/leetcode-python
 
-# Roadmap
-I found it make sense to do similar problem together, so that we can recognize the problem faster when we encounter a new one.
+# Similar Problems
+I found it make sense to do similar problems together, so that we can recognize the problem faster when we encounter a new one.
 
 ### Two Pointers
 |  Id | Name | Difficulty | Comments |
