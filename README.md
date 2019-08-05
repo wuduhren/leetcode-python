@@ -8,17 +8,6 @@ https://github.com/wuduhren/leetcode-python
 
 # Roadmap
 ## Search
-<style>
-    .hard {
-        color: #d9534f;
-    }
-    .medium {
-        color: #f0ad4e;
-    }
-    .easy {
-        color: #5cb85c;
-    }
-</style>
 <table>
     <tr>
         <th>ID</th>
@@ -141,7 +130,8 @@ https://github.com/wuduhren/leetcode-python
     </tr>
 </table>
 
-**To be continued...*
+
+**To be continued...**
 
 # Resources
 These are the interview resources I personally used and only if it is really helpful I will put it here.
