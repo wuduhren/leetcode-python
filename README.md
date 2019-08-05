@@ -36,7 +36,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/letter-combinations-of-a-phone-number">Letter Combinations of a Phone Number</span></td>
         <td>★★</td>
         <td>Combination</td>
-
         <td><span class="medium" href="https://leetcode.com/problems/combination-sum/">39</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/combination-sum-ii/">40</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/combinations/">77</span>></td>
@@ -49,7 +48,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/permutations/">Permutations</span></td>
         <td>★★</td>
         <td>Permutation</td>
-
         <td><span class="medium" href="https://leetcode.com/problems/permutations-ii/">47</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/letter-case-permutation/">784</span></td>
         <td><span class="easy" href="https://leetcode.com/problems/find-the-shortest-superstring">943</span></td>
@@ -62,7 +60,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/generate-parentheses/">Generate Parentheses</span></td>
         <td>★★★</td>
         <td>DFS</td>
-
         <td><span class="hard" href="https://leetcode.com/problems/remove-invalid-parentheses/">301</span></td>
         <td></td>
         <td></td>
@@ -76,7 +73,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="hard" href="https://leetcode.com/problems/sudoku-solver">Sudoku Solver</span></td>
         <td>★★★</td>
         <td>DFS</td>
-
         <td><span class="medium" href="https://leetcode.com/problems/n-queens">51</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/n-queens-ii">52</span></td>
         <td></td>
@@ -90,7 +86,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/word-search/">Word Search</td>
         <td>★★★</td>
         <td>DFS</td>
-
         <td class="hard" href="https://leetcode.com/problems/word-search-ii/submissions/">212</td>
         <td></td>
         <td></td>
@@ -104,7 +99,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/word-ladder/">Word Ladder</span></td>
         <td>★★★★</td>
         <td>BFS</td>
-
         <td><span class="hard" href="https://leetcode.com/problems/word-ladder-ii/">126</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/open-the-lock/">752</span></td>
         <td></td>
@@ -118,7 +112,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/01-matrix/">01 Matrix</span></td>
         <td>★★★</td>
         <td>BFS</td>
-
         <td><<span class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/shortest-bridge/">934</span></td>
         <td></td>
@@ -132,7 +125,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/01-matrix/">Partition to K Equal Sum Subsets</span></td>
         <td>★★★</td>
         <td>Partition</td>
-
         <td><span class="medium" href="https://leetcode.com/problems/restore-ip-addresses/">93</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/palindrome-partitioning/">131</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/different-ways-to-add-parentheses/">241</span></td>
