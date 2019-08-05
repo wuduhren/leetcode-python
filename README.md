@@ -38,7 +38,7 @@ https://github.com/wuduhren/leetcode-python
         <td>Combination</td>
         <td><span class="medium" href="https://leetcode.com/problems/combination-sum/">39</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/combination-sum-ii/">40</span></td>
-        <td><span class="medium" href="https://leetcode.com/problems/combinations/">77</span>></td>
+        <td><span class="medium" href="https://leetcode.com/problems/combinations/">77</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/subsets/">78</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/subsets-ii/">90</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/combination-sum-iii/">216</span></td>
@@ -66,7 +66,6 @@ https://github.com/wuduhren/leetcode-python
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>37</td>
@@ -79,7 +78,6 @@ https://github.com/wuduhren/leetcode-python
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>79</td>
@@ -87,7 +85,6 @@ https://github.com/wuduhren/leetcode-python
         <td>★★★</td>
         <td>DFS</td>
         <td class="hard" href="https://leetcode.com/problems/word-search-ii/submissions/">212</td>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -105,16 +102,14 @@ https://github.com/wuduhren/leetcode-python
         <td></td>
         <td></td>
         <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>542</td>
         <td><span class="medium" href="https://leetcode.com/problems/01-matrix/">01 Matrix</span></td>
         <td>★★★</td>
         <td>BFS</td>
-        <td><<span class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</span></td>
+        <td><span class="hard" href="https://leetcode.com/problems/cut-off-trees-for-golf-event/">675</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/shortest-bridge/">934</span></td>
-        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -130,7 +125,6 @@ https://github.com/wuduhren/leetcode-python
         <td><span class="medium" href="https://leetcode.com/problems/different-ways-to-add-parentheses/">241</span></td>
         <td><span class="hard" href="https://leetcode.com/problems/expression-add-operators/">282</span></td>
         <td><span class="medium" href="https://leetcode.com/problems/split-array-into-fibonacci-sequence/">842</span></td>
-        <td></td>
         <td></td>
     </tr>
 </tbody>
