@@ -7,9 +7,7 @@ If you like my answer, a star on GitHub means a lot to me.
 https://github.com/wuduhren/leetcode-python
 
 # Roadmap
-1. This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos).
-
-2. I found it make sense to do similar problem together, so that we can recognize the problem faster when we encounter a new one.
+I found it make sense to do similar problem together, so that we can recognize the problem faster when we encounter a new one.
 
 ### Two Pointers
 |  Id | Name | Difficulty | Comments |
@@ -138,6 +136,8 @@ https://github.com/wuduhren/leetcode-python
 |  208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree "Implement Trie (Prefix Tree)") | ★★★ | [648](https://leetcode.com/problems/replace-words/ "648") | [676](https://leetcode.com/problems/implement-magic-dictionary "676") | [677](https://leetcode.com/problems/map-sum-pairs "677") | [720](https://leetcode.com/problems/longest-word-in-dictionary "720") | [745](https://leetcode.com/problems/prefix-and-suffix-search "745") | Trie |
 |  307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable "Range Sum Query - Mutable") | ★★★ |  |  |  |  |  | BIT/Segment Tree |
 |  901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span "Online Stock Span") | ★★★ | [907](https://leetcode.com/problems/sum-of-subarray-minimums "907") |  |  |  | 1019 | monotonic stack |
+
+This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos).
 
 # Other Resources
 These are the interview resources I personally used and only if it is really helpful I will put it here.
