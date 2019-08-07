@@ -1,17 +1,13 @@
-#https://leetcode.com/problems/first-unique-character-in-a-string/
+import collections
+
 class Solution(object):
     def firstUniqChar(self, string):
-        counter = {}
-        
+        counter = collections.Counter()
         for char in string:
-            if char in counter:
-                counter[char]+=1
-            else:
-                counter[char] = 1
-            
-        for i in range(len(string)):
+            counter[char]+=1
+
+        for i in xrange(len(string)):
             char = string[i]
-            if counter[char]==1:
-                return i
-            
+            if counter[char]==1: return i
+
         return -1
