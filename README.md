@@ -73,16 +73,16 @@ I found it make sense to do similar problems together, so that we can recognize 
 |  968 | [Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/ "Binary Tree Cameras") | ★★★★ | [337](https://leetcode.com/problems/house-robber-iii/ "337") | [979](https://leetcode.com/problems/distribute-coins-in-binary-tree "979") |  |  |  |  |  |
 
 ### Binary Search
-|  Name | Difficulty |  |  |  |  |  | Comments |
-| --- | :---: | :---: | --- | --- | --- | --- | --- |
-|  [Search Insert Position](https://leetcode.com/problems/search-insert-position/ "Search Insert Position") | ★★ | [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ "34") | [704](https://leetcode.com/problems/binary-search/ "704") | [981](https://leetcode.com/problems/time-based-key-value-store "981") |  |  | upper_bound |
-|  [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array "Search in Rotated Sorted Array") | ★★★ | [81](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ "81") | [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ "153") | [154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii "154") | [162](https://leetcode.com/problems/find-peak-element "162") | [852](https://leetcode.com/problems/peak-index-in-a-mountain-array/ "852") | rotated / peak |
-|  [Sqrt(x)](https://leetcode.com/problems/sqrtx "Sqrt(x)") | ★★★ |  |  |  |  |  | upper_bound |
-|  [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/ "Search a 2D Matrix") | ★★★ |  |  |  |  |  | treat 2d as 1d |
-|  [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ "Kth Smallest Element in a Sorted Matrix") | ★★★ | [668](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/ "668") |  |  |  |  | kth + matrix |
-|  [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/ "Swim in Rising Water") | ★★★ | [174](https://leetcode.com/problems/dungeon-game/ "174") | [875](https://leetcode.com/problems/koko-eating-bananas/ "875") |  |  |  | guess ans and check |
-|  [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Median of Two Sorted Arrays") | ★★★★ |  |  |  |  |  |  |
-|  [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/ "Find K-th Smallest Pair Distance") | ★★★★ | [786](https://leetcode.com/problems/k-th-smallest-prime-fraction/ "786") |  |  |  |  | kth + two pointers |
+|  Id | Name | Difficulty |  |  |  |  |  | Comments |
+| ---: | --- | :---: | :---: | --- | --- | --- | --- | --- |
+|  35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/ "Search Insert Position") | ★★ | [34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/ "34") | [704](https://leetcode.com/problems/binary-search/ "704") | [981](https://leetcode.com/problems/time-based-key-value-store "981") |  |  | upper_bound |
+|  33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array "Search in Rotated Sorted Array") | ★★★ | [81](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ "81") | [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ "153") | [154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii "154") | [162](https://leetcode.com/problems/find-peak-element "162") | [852](https://leetcode.com/problems/peak-index-in-a-mountain-array/ "852") | rotated / peak |
+|  69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx "Sqrt(x)") | ★★★ |  |  |  |  |  | upper_bound |
+|  74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/ "Search a 2D Matrix") | ★★★ |  |  |  |  |  | treat 2d as 1d |
+|  378 | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ "Kth Smallest Element in a Sorted Matrix") | ★★★ | [668](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/ "668") |  |  |  |  | kth + matrix |
+|  778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/ "Swim in Rising Water") | ★★★ | [174](https://leetcode.com/problems/dungeon-game/ "174") | [875](https://leetcode.com/problems/koko-eating-bananas/ "875") |  |  |  | guess ans and check |
+|  4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Median of Two Sorted Arrays") | ★★★★ |  |  |  |  |  |  |
+|  719 | [Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/ "Find K-th Smallest Pair Distance") | ★★★★ | [786](https://leetcode.com/problems/k-th-smallest-prime-fraction/ "786") |  |  |  |  | kth + two pointers |
 
 ### Binary Search Tree
 |  Id | Name | Difficulty |  | Comments |
