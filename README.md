@@ -6,6 +6,7 @@ Because I wanted to help others like me.
 If you like my answer, a star on GitHub means a lot to me. 
 https://github.com/wuduhren/leetcode-python
 
+
 # Similar Problems
 I found it make sense to do similar problems together, so that we can recognize the problem faster when we encounter a new one.
 
@@ -139,6 +140,21 @@ I found it make sense to do similar problems together, so that we can recognize 
 
 This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos).
 
+
+# System Design
+1. More resource  
+<https://github.com/shashank88/system_design>
+
+2. Architecture 101  
+<https://engineering.videoblocks.com/web-architecture-101-a3224e126947>
+
+3. How to scale up? There are also lots of tech interview related topic in his channel.  
+<https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s>
+
+4. Narendra talks about many system design.  
+<https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists>
+
+
 # Other Resources
 These are the interview resources I personally used and only if it is really helpful I will put it here.
 
@@ -165,19 +181,12 @@ These are the interview resources I personally used and only if it is really hel
 Basic data structure and algorithm online course taught in Python. This course is design to help you find job and do well in the interview.  
 <https://classroom.udacity.com/courses/ud513>
 
-## System Design
-1. More resource  
-<https://github.com/shashank88/system_design>
-
-2. Architecture 101  
-<https://engineering.videoblocks.com/web-architecture-101-a3224e126947>
-
-3. How to scale up? There are also lots of tech interview related topic in his channel.  
-<https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s>
-
-4. Narendra talks about many system design.  
-<https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists>
-
 ## Interview Question Survey
 <https://www.glassdoor.com/index.htm>  
 <https://www.careercup.com/>
+
+
+# Interview Knowledge Base Quesion
+1. [Session vs Cookie](https://medium.com/@chriswrite/session-vs-cookie-software-engineer-top-asked-question-1-9bdbc0766739)
+2. [Token Authentication](https://medium.com/@chriswrite/token-authentication-software-engineer-top-asked-question-2-76dd2ed7c2d5)  
+Still making
