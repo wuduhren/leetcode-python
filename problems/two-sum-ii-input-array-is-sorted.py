@@ -1,11 +1,3 @@
-class Solution(object):
-    def twoSum(self, numbers, target):
-        memo = {}
-        for i, n in enumerate(numbers):
-            if target-n in memo:
-                return [memo[target-n]+1, i+1]
-            memo[n] = i
-
 """
 We put `l` and `r` at the beginning and at the end of the array.
 Everytime with new pair of `l` and `r`, we check if its sum is target. If true, return the answer.
@@ -26,3 +18,16 @@ class Solution(object):
             else:
                 l = l+1
         return []
+
+"""
+We use a hashmap to keep track of all the number we went through.
+Since we exactly know what we are looking for (`target-n`), we can check if the counter part is in the hashmap or not.
+If true, return the answer.
+"""
+class Solution(object):
+    def twoSum(self, numbers, target):
+        memo = {}
+        for i, n in enumerate(numbers):
+            if target-n in memo:
+                return [memo[target-n]+1, i+1]
+            memo[n] = i
