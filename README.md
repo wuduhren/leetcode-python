@@ -165,7 +165,11 @@ These are the interview resources I personally used and only if it is really hel
 <https://youtu.be/YJZCUhxNCv8>
 
 3. CS DoJo on "How I Got a Job at Google as a Software Engineer". There are also lots of technique on coding interview in his channel.  
-<https://www.youtube.com/watch?v=UPO-9iMjBpc>
+<https://www.youtube.com/watch?v=UPO-9iMjBpc>  
+
+4. The #1 Daily Habit of Those Who Dominate with Andy Frisella (Also on Spotify or Youtube, just google it.)
+<https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447>
+
 
 ## Prepare in a Structural Way
 1. <https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp>
@@ -182,8 +186,8 @@ Basic data structure and algorithm online course taught in Python. This course i
 <https://classroom.udacity.com/courses/ud513>
 
 ## Interview Question Survey
-<https://www.glassdoor.com/index.htm>  
-<https://www.careercup.com/>
+1. <https://www.glassdoor.com/index.htm>
+2. <https://www.careercup.com/>
 
 
 # Interview Knowledge Base Quesion
