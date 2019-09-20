@@ -1,10 +1,11 @@
-import collections
+from collections import Counter
 
 class Solution(object):
     def firstUniqChar(self, string):
-        counter = collections.Counter()
-        for char in string:
-            counter[char]+=1
+        # counter = Counter()
+        # for char in string:
+        #     counter[char]+=1
+        counter = Counter(string)
 
         for i in xrange(len(string)):
             char = string[i]
