@@ -42,7 +42,6 @@ helper([], 0, 7)
         .
 
     helper([7], 3, 0) --> bingo
-
 ```
 """
 class Solution(object):
@@ -51,9 +50,9 @@ class Solution(object):
             if target_remain==0:
                 answer.append(combination)
             for i in xrange(start, len(candidates)):
-                n = candidates[i]
-                if n>target_remain: break
-                helper(combination+[n], i, target_remain-n)
+                num = candidates[i] #try out if with num adding into combination can make target_remain 0
+                if num>target_remain: break
+                helper(combination+[num], i, target_remain-num)
 
         candidates.sort()
         answer = []
