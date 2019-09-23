@@ -51,3 +51,21 @@ class Solution(object):
                 for s in power_set:
                     answer.append(answer[i]+s)
         return answer
+
+
+#DFS
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        nums.sort()
+
+        def dfs(path, nums):
+            opt.append(path)
+            if len(nums)==0: return
+            for i, num in enumerate(nums):
+                if i>0 and nums[i]==nums[i-1]: continue
+                dfs(path+[num], nums[i+1:])
+        opt = []
+        dfs([], nums)
+        return opt
+
+

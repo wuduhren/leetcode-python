@@ -25,3 +25,16 @@ class Solution(object):
                 ans.append(first)
                 total+=first
                 first+=1
+
+#DFS
+class Solution(object):
+    def combinationSum3(self, K, N):
+        def dfs(path, min_num):
+            if len(path)==K and sum(path)==N:
+                opt.append(path)
+            for num in xrange(min_num, 10):
+                dfs(path+[num], num+1)
+        opt = []
+        dfs([], 1)
+        return opt
+

@@ -66,6 +66,22 @@ The space complexity is O(N!/(N!(N-K)!)), combination N choose K.
 
 
 
+#DFS
+class Solution(object):
+    def combine(self, N, K):
+        def dfs(n_min, path):
+            if len(path)==K:
+                opt.append(path)
+                return
+            else:
+                for n in xrange(n_min, N+1):
+                    dfs(n+1, path+[n])
+        opt = []
+        dfs(1, [])
+        return opt
+
+
+
 
 
 

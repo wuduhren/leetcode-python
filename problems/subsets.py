@@ -72,3 +72,16 @@ Now if we have iterated the third element, then the `answer` now contains all th
 The time complexity is O(2^N). The space complexity is O(2^N), too.
 (This solution is in spired by @ZitaoWang's elegant solution)
 """
+
+#DFS
+class Solution(object):
+    def subsets(self, nums):
+        def dfs(path, nums):
+            opt.append(path)
+            if len(nums)==0: return
+            for i, num in enumerate(nums):
+                dfs(path+[num], nums[i+1:])
+
+        opt = []
+        dfs([], nums)
+        return opt

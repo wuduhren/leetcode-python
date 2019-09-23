@@ -74,3 +74,47 @@ class Solution(object):
             else:
                 return helper(candidates, target-n, combination+[n]) + helper(candidates[1:], target, combination)
         return helper(sorted(candidates), target, [])
+
+
+# 2019/9/12 Update
+class Solution(object):
+    def combinationSum(self, candidates, T):
+        answer = []
+        ans = []
+        first = 0
+        total = 0
+
+        candidates.sort()
+
+        memo = {}
+        for i, num in enumerate(candidates):
+            memo[num] = i
+
+        while True:
+            if total==T:
+                answer.append(ans[:])
+            if total>=T or first>=len(candidates):
+                if not ans: return answer
+                num = ans.pop()
+                first = memo[num]+1
+                total-=num
+            else:
+                ans.append(candidates[first])
+                total+=candidates[first]
+
+# DFS
+class Solution(object):
+    def combinationSum(self, candidates, T):
+        def dfs(index, target, path):
+            if target<0:
+                return
+            elif target==0:
+                opt.append(path)
+            else:
+                for i in xrange(index, len(candidates)):
+                    num = candidates[i]
+                    dfs(i, target-num, path+[num])
+        opt = []
+        candidates.sort()
+        dfs(0, T, [])
+        return opt
