@@ -8,7 +8,7 @@ https://github.com/wuduhren/leetcode-python
 
 
 # Similar Problems
-I found it make sense to do similar problems together, so that we can recognize the problem faster when we encounter a new one.
+I found it make sense to do similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
 
 ### Two Pointers
 |  Id | Name | Difficulty | Comments |
@@ -36,7 +36,7 @@ I found it make sense to do similar problems together, so that we can recognize 
 |  46 | [Permutations](https://leetcode.com/problems/permutations/ "Permutations") | ★★ | [47](https://leetcode.com/problems/permutations-ii/ "47") | [784](https://leetcode.com/problems/letter-case-permutation/ "784") | [943](https://leetcode.com/problems/find-the-shortest-superstring "943") | [996](https://leetcode.com/problems/number-of-squareful-arrays/ "996") |  |  | Permutation |
 |  22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/ "Generate Parentheses") | ★★★ | [301](https://leetcode.com/problems/remove-invalid-parentheses/ "301") |  |  |  |  |  | DFS |
 |  37 | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver "Sudoku Solver") | ★★★ | [51](https://leetcode.com/problems/n-queens "51") | [52](https://leetcode.com/problems/n-queens-ii "52") |  |  |  |  | DFS |
-|  79 | [Word Search](https://leetcode.com/problems/word-search/ "Word Search") | ★★★ | [212](https://leetcode.com/problems/word-search-ii/submissions/ "212") |  |  |  |  |  | DFS |
+|  79 | [Word Search](https://leetcode.com/problems/word-search/ "Word Search") | ★★★ | [212](https://leetcode.com/problems/word-search-ii/ "212") |  |  |  |  |  | DFS |
 |  127 | [Word Ladder](https://leetcode.com/problems/word-ladder/ "Word Ladder") | ★★★★ | [126](https://leetcode.com/problems/word-ladder-ii/ "126") | [752](https://leetcode.com/problems/open-the-lock/ "752") |  |  |  |  | BFS |
 |  542 | [01 Matrix](https://leetcode.com/problems/01-matrix/ "01 Matrix") | ★★★ | [675](https://leetcode.com/problems/cut-off-trees-for-golf-event/ "675") | [934](https://leetcode.com/problems/shortest-bridge/ "934") |  |  |  |  | BFS |
 |  698 | [Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets "Partition to K Equal Sum Subsets") | ★★★ | [93](https://leetcode.com/problems/restore-ip-addresses/ "93") | [131](https://leetcode.com/problems/palindrome-partitioning/ "131") | [241](https://leetcode.com/problems/different-ways-to-add-parentheses/ "241") | [282](https://leetcode.com/problems/expression-add-operators/ "282") | [842](https://leetcode.com/problems/split-array-into-fibonacci-sequence/ "842") |  | Partition |
