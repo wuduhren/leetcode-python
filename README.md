@@ -1,5 +1,5 @@
 # Leetcode Python Solution
-1. This is my Python (2.7) solution on Leetcode. The question is at `problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
+1. This is my Python (2.7) Leetcode solution. The question is at `problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 2. I really take time tried to make the best solution or explaination. 
 Because I wanted to help others like me. 
