@@ -4,7 +4,7 @@ Using DFS, we may eventually find the `endWord` but not the shortest path.
 
 First, build a memo so that we can find the related word without going through a~z every time we pop out a new word from queue.
 So for example
-```
+```python
 wordList = ["hot","dot","dog","lot","log","cog"]
 
 memo = {
@@ -30,8 +30,8 @@ If not, put all the neighbor to the queue.
 
 If the queue ended and we did not find the `endWord`, return 0.
 
-The time complexity is O(W*C), W is the word count, C is the character count in each word.
-The space complexity is also O(W*C).
+The time complexity is `O(W*C)`, W is the word count, C is the character count in each word.
+The space complexity is also `O(W*C)`.
 """
 class Solution(object):
     def ladderLength(self, beginWord, endWord, wordList):
