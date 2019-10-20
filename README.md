@@ -1,50 +1,35 @@
-# Leetcode Python Solution
-1. This is my Python (2.7) Leetcode solution. The question is at `problems/the-file-name/`. For example, `merge-sorted-array.py`'s question is at `https://leetcode.com/problems/merge-sorted-array/`.
+# About
+1. This is my Python (2.7) Leetcode solution.
+As time grows, this also become a guide to prepare for software engineer interview.
 
-2. I really take time tried to make the best solution or explanation. 
+2. I really take time tried to make the best solution and collect the best resource that I found.  
 Because I wanted to help others like me. 
 If you like my answer, a star on GitHub means a lot to me. 
 https://github.com/wuduhren/leetcode-python  
 
+3. The solution is at `problems/the-file-name/`.
+For example, `merge-sorted-array.py`'s solution is at `https://leetcode.com/problems/merge-sorted-array/`.
+
 ```
+* Leetcode Similar Problems
+
 * Software Engineer Interview
     * Overall Mindset
     * Prepare in a Structural Way
     * I Know Nothing About Data Structures and Algorithms
-* Leetcode Similar Problems
+
 * System Design
+
 * Knowledge Base Question
+
 * Others
     * Resume
     * Interview Question Survey
 ```
 
-# Software Engineer Interview
-## Overall Mindset
-1. Having a right mindset is the most important one. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
-
-2. This is a speech from Sean Lee on "How to Get a Job at the Big 4". I highly recommend this because it gives me the right mindset on how to put in the work.  
-<https://youtu.be/YJZCUhxNCv8>
-
-3. CS DoJo on "How I Got a Job at Google as a Software Engineer". There are also lots of technique on coding interview in his channel.  
-<https://www.youtube.com/watch?v=UPO-9iMjBpc>  
-
-4. The #1 Daily Habit of Those Who Dominate with Andy Frisella (Also on Spotify or Youtube, just google it.)
-<https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447>
-
-## Prepare in a Structural Way
-1. <https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp>
-
-2. <https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade>
-
-3. <https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade>
-
-## I Know Nothing About Data Structures and Algorithms
-If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.  
-
 
 # Leetcode Similar Problems
-I found it make sense to do similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
+I found it makes sense to solve similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
 
 ### Two Pointers
 |  Id | Name | Difficulty | Comments |
@@ -175,6 +160,30 @@ I found it make sense to do similar problems together, so that we can recognize 
 |  901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span "Online Stock Span") | ★★★ | [907](https://leetcode.com/problems/sum-of-subarray-minimums "907") |  |  |  | 1019 | monotonic stack |
 
 This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos).
+
+
+# Software Engineer Interview
+## Overall Mindset
+1. Having a right mindset is the most important one. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
+
+2. This is a speech from Sean Lee on "How to Get a Job at the Big 4". I highly recommend this because it gives me the right mindset on how to put in the work.  
+<https://youtu.be/YJZCUhxNCv8>
+
+3. CS DoJo on "How I Got a Job at Google as a Software Engineer". There are also lots of technique on coding interview in his channel.  
+<https://www.youtube.com/watch?v=UPO-9iMjBpc>  
+
+4. The #1 Daily Habit of Those Who Dominate with Andy Frisella (Also on Spotify or Youtube, just google it.)
+<https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447>
+
+## Prepare in a Structural Way
+1. <https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp>
+
+2. <https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade>
+
+3. <https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade>
+
+## I Know Nothing About Data Structures and Algorithms
+If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.  
 
 
 # System Design
