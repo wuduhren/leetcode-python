@@ -186,7 +186,7 @@ If you are new or know nothing about data structures and algorithms, I recommend
 # Knowledge Base Question
 1. [Session vs Cookie](https://medium.com/@chriswrite/session-vs-cookie-software-engineer-top-asked-question-1-9bdbc0766739)
 2. [Token Authentication](https://medium.com/@chriswrite/token-authentication-software-engineer-top-asked-question-2-76dd2ed7c2d5)  
-Will continue to grow soon...
+...
 
 
 # Others
@@ -194,5 +194,5 @@ Will continue to grow soon...
 <https://drive.google.com/file/d/10b9NZDhPbUOW_C7108IKe9ev6Ed2UG7F/view>
 
 ## Interview Question Survey
-1. <https://www.glassdoor.com/index.htm>
-2. <https://www.careercup.com/>
+<https://www.glassdoor.com/index.htm>  
+<https://www.careercup.com/>
