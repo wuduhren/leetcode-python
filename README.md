@@ -10,23 +10,6 @@ https://github.com/wuduhren/leetcode-python
 3. The solution is at `problems/the-file-name/`.
 For example, `merge-sorted-array.py`'s solution is at `https://leetcode.com/problems/merge-sorted-array/`.
 
-```
-* Leetcode Similar Problems
-
-* Software Engineer Interview
-    * Overall Mindset
-    * Prepare in a Structural Way
-    * I Know Nothing About Data Structures and Algorithms
-
-* System Design
-
-* Knowledge Base Question
-
-* Others
-    * Resume
-    * Interview Question Survey
-```
-
 
 # Leetcode Similar Problems
 I found it makes sense to solve similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
