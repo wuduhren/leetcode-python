@@ -185,7 +185,22 @@ If you are new or know nothing about data structures and algorithms, I recommend
 
 # Knowledge Base Question
 1. [Session vs Cookie](https://medium.com/@chriswrite/session-vs-cookie-software-engineer-top-asked-question-1-9bdbc0766739)
-2. [Token Authentication](https://medium.com/@chriswrite/token-authentication-software-engineer-top-asked-question-2-76dd2ed7c2d5)  
+2. [Token Authentication](https://medium.com/@chriswrite/token-authentication-software-engineer-top-asked-question-2-76dd2ed7c2d5)
+3. [TCP/UDP](https://www.youtube.com/watch?v=Vdc8TCESIg8)
+    * Transport Layer
+        * Application Layer (HTTP, FTP)
+        * Transport Layer (UDP/TCP, Slice data to small packages)
+        * Network Layer (IP)
+        * Link Layer (Wifi)
+        * Physical Layer (Coaxial Ethernet Cable)
+    * UDP has smaller package size (8 bytes), while TCP needs 20 bytes due to it has larger header.
+    * UDP are not order guaranteed. TCP are in order.
+    * They both have error messages, but TCP will resent it again, UDP does not.
+    * TCP needs a three-way handshake to initiate a connection between ports. It’s like a phone call. While UDP is like a mail.
+    * In short, UDP is smaller and faster while TCP is reliable and ordered.
+    * UDP example, video streaming, DNS lookups.
+4. [HTTPS, CA, PKI](https://www.youtube.com/watch?v=i-rtxrEz_E8)
+5. HTTP, [Socket](https://www.youtube.com/watch?v=Y0g3M4VG6Ns), [WebSocket](https://www.youtube.com/watch?v=i5OVcTdt_OU), [HTTP KeepAlive](https://www.youtube.com/watch?v=j8lgFaIajko), HTTP2  
 ...
 
 
