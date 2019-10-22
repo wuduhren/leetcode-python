@@ -200,7 +200,24 @@ If you are new or know nothing about data structures and algorithms, I recommend
     * In short, UDP is smaller and faster while TCP is reliable and ordered.
     * UDP example, video streaming, DNS lookups.
 4. [HTTPS, CA, PKI](https://www.youtube.com/watch?v=i-rtxrEz_E8)
-5. HTTP, [Socket](https://www.youtube.com/watch?v=Y0g3M4VG6Ns), [WebSocket](https://www.youtube.com/watch?v=i5OVcTdt_OU), [HTTP KeepAlive](https://www.youtube.com/watch?v=j8lgFaIajko), HTTP2  
+5. HTTP, HTTP Code, [Socket](https://www.youtube.com/watch?v=Y0g3M4VG6Ns), [WebSocket](https://www.youtube.com/watch?v=i5OVcTdt_OU), [HTTP KeepAlive](https://www.youtube.com/watch?v=j8lgFaIajko), HTTP2
+6. DNS, CNAME, NS, A, AAAA, IPv4, IPv6
+7. Code, Process, Thread
+8. [Stack memory vs Heap memory](https://www.gribblelab.org/CBootCamp/7_Memory_Stack_vs_Heap.html)
+    Stack memory
+    1. Stores temporary variable created by functions.
+    2. Memory is managed by CPU for you. No need to allocate and free it by hand.
+    3. L.I.F.O.
+    4. Stacks has limit (That is why we seldom use recursion real life)
+    5. Stacks variable are local variable in nature.
+
+    Heap memory
+    1. Larger.
+    2. Slightly slower. Because we has to use "pointers" to access.
+    3. We are responsible to free() the memory.
+    4. Heap variable is global variable in nature.
+9. GET vs POST
+10. [CORS](https://www.youtube.com/watch?v=eWEgUcHPle0)  
 ...
 
 
