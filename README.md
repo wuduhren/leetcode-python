@@ -149,11 +149,11 @@ This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO3
 ## Overall Mindset
 1. Having a right mindset is the most important one. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
 
-2. This is a speech from Sean Lee on [How to Get a Job at the Big 4](https://youtu.be/YJZCUhxNCv8). I highly recommend this because it gives me the right mindset on how to put in the work.
+2. [How to Get a Job at the Big 4](https://youtu.be/YJZCUhxNCv8).
 
-3. CS DoJo on [How I Got a Job at Google as a Software Engineer](https://www.youtube.com/watch?v=UPO-9iMjBpc). There are also lots of technique on coding interview in his channel.
+3. [How I Got a Job at Google as a Software Engineer](https://www.youtube.com/watch?v=UPO-9iMjBpc).
 
-4. [The #1 Daily Habit of Those Who Dominate with Andy Frisella](https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447) (Also on Spotify or Youtube, just google it.)
+4. [The #1 Daily Habit of Those Who Dominate](https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447) with Andy Frisella. It is also avaliable on Spotify or Youtube, just google it.
 
 ## Prepare in a Structural Way
 1. [How should I prepare for my Google interview if I have 1 month left and I’m applying for a software engineer role?](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp)
