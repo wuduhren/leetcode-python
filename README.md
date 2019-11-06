@@ -149,38 +149,31 @@ This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO3
 ## Overall Mindset
 1. Having a right mindset is the most important one. It keeps you going when you are tired after work. Studying when everyone else are out having fun. Reminding you that your goals are not going to come easy, it takes time, self-discipline, mental and physical toughness...
 
-2. This is a speech from Sean Lee on "How to Get a Job at the Big 4". I highly recommend this because it gives me the right mindset on how to put in the work.  
-<https://youtu.be/YJZCUhxNCv8>
+2. This is a speech from Sean Lee on [How to Get a Job at the Big 4](https://youtu.be/YJZCUhxNCv8). I highly recommend this because it gives me the right mindset on how to put in the work.
 
-3. CS DoJo on "How I Got a Job at Google as a Software Engineer". There are also lots of technique on coding interview in his channel.  
-<https://www.youtube.com/watch?v=UPO-9iMjBpc>  
+3. CS DoJo on [How I Got a Job at Google as a Software Engineer](https://www.youtube.com/watch?v=UPO-9iMjBpc). There are also lots of technique on coding interview in his channel.
 
-4. The #1 Daily Habit of Those Who Dominate with Andy Frisella (Also on Spotify or Youtube, just google it.)
-<https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447>
+4. [The #1 Daily Habit of Those Who Dominate with Andy Frisella](https://podcasts.apple.com/tw/podcast/the-mfceo-project/id1012570406?i=1000412624447) (Also on Spotify or Youtube, just google it.)
 
 ## Prepare in a Structural Way
-1. <https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp>
+1. [How should I prepare for my Google interview if I have 1 month left and I’m applying for a software engineer role?](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp)
 
-2. <https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade>
+2. [How can I get a job at Facebook or Google in 6 months? I need a concise work-plan to build a good enough skill set. Should I join some other start-up or build my own projects/start-up? Should I just focus on practicing data structures and algorithms?](https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade)
 
-3. <https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade>
+3. [What should I know from the CLRS 3rd edition book if my aim is to get into Google?](https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade)
 
-## I Know Nothing About Data Structures and Algorithms
+## Data Structures and Algorithms for beginners
 If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.  
 
 
 # System Design
-1. More resource  
-<https://github.com/shashank88/system_design>
+1. [More resource](https://github.com/shashank88/system_design)
 
-2. Architecture 101  
-<https://engineering.videoblocks.com/web-architecture-101-a3224e126947>
+2. [Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
 
-3. How to scale up? There are also lots of tech interview related topic in his channel.  
-<https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s>
+3. [How to scale up?](https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s) There are also lots of tech interview related topic in his channel.
 
-4. Narendra talks about many system design.  
-<https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists>
+4. [Narendra's Youtube Channel](https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists)
 
 
 # Knowledge Base Question
@@ -228,3 +221,7 @@ If you are new or know nothing about data structures and algorithms, I recommend
 ## Interview Question Survey
 <https://www.glassdoor.com/index.htm>  
 <https://www.careercup.com/>
+
+## Offer Negotiation
+<https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/>
+
