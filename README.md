@@ -158,12 +158,12 @@ This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO3
 ## Prepare in a Structural Way
 1. [How should I prepare for my Google interview if I have 1 month left and I’m applying for a software engineer role?](https://www.quora.com/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role/answer/Anthony-D-Mays?ch=10&share=5c488000&srid=W0jqp)
 
-2. [How can I get a job at Facebook or Google in 6 months? I need a concise work-plan to build a good enough skill set. Should I join some other start-up or build my own projects/start-up? Should I just focus on practicing data structures and algorithms?](https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade)
+2. [How can I get a job at Facebook or Google in 6 months?](https://www.quora.com/How-can-I-get-a-job-at-Facebook-or-Google-in-6-months-I-need-a-concise-work-plan-to-build-a-good-enough-skill-set-Should-I-join-some-other-start-up-or-build-my-own-projects-start-up-Should-I-just-focus-on-practicing-data-structures-and-algorithms/answer/Jimmy-Saade)
 
 3. [What should I know from the CLRS 3rd edition book if my aim is to get into Google?](https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade)
 
 ## Data Structures and Algorithms for beginners
-If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.  
+If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.
 
 
 # System Design
