@@ -1,3 +1,4 @@
+#2019/11/17 Update
 """
 Add numbers, units to units digit, tens to tens digit...
 If the added number is greater than 9
@@ -18,7 +19,7 @@ class Solution(object):
         while l1 or l2 or temp:
             val = (l1.val if l1 else 0) + (l2.val if l2 else 0) + temp
 
-            if val>9:
+            if val>=10:
                 temp = 1
                 val = val-10
             else:
@@ -30,13 +31,6 @@ class Solution(object):
             if l2: l2 = l2.next
             curr = curr.next
         return pre_head.next
-
-
-
-
-
-
-
 
 
 class Solution(object):
