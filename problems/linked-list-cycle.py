@@ -9,7 +9,7 @@ class Solution(object):
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-            if fast==slow: return True
+            if fast is slow: return True
         return False
 
 #Flag
@@ -25,17 +25,17 @@ class Solution(object):
             curr = curr.next
         return False
 
-#HashTable
-#Use a hash-table to store the visited nodes
+#HashSet
+#Use a hash-set to store the visited nodes
 #time: O(N).
 #space: O(N).
 class Solution(object):
     def hasCycle(self, head):
-        visited = {}
+        visited = set()
         curr = head
         while curr:
             if curr in visited: return True
-            visited[curr] = None
+            visited.add(curr)
             curr = curr.next
         return False
         
