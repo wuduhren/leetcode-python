@@ -1,4 +1,7 @@
-#https://leetcode.com/problems/linked-list-cycle/
+#Two Pointers
+#If the linked list has cycle, the fast pointer will eventually catch up.
+#time: O(N).
+#space: O(1).
 class Solution(object):
     def hasCycle(self, head):
         fast = head
@@ -6,6 +9,33 @@ class Solution(object):
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
-            if (fast==slow):
-                return True
+            if fast==slow: return True
         return False
+
+#Flag
+#Use a flag that stores on the nodes to know if we visited or not.
+#time: O(N).
+#space: O(N), for each node we use O(1) and there are N nodes.
+class Solution(object):
+    def hasCycle(self, head):
+        curr = head
+        while curr:
+            if hasattr(curr, 'visited') and curr.visited: return True
+            curr.visited = True
+            curr = curr.next
+        return False
+
+#HashTable
+#Use a hash-table to store the visited nodes
+#time: O(N).
+#space: O(N).
+class Solution(object):
+    def hasCycle(self, head):
+        visited = {}
+        curr = head
+        while curr:
+            if curr in visited: return True
+            visited[curr] = None
+            curr = curr.next
+        return False
+        
