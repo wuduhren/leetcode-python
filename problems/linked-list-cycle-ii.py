@@ -1,3 +1,7 @@
+#Flag
+#Use a flag that stores on the nodes to know if we visited or not.
+#time: O(N).
+#space: O(N), for each node we use O(1) and there are N nodes.
 class Solution(object):
     def detectCycle(self, head):
         curr = head
@@ -7,12 +11,16 @@ class Solution(object):
             curr = curr.next
         return None
 
+#HashSet
+#Use a hash-set to store the visited nodes
+#time: O(N).
+#space: O(N).
 class Solution(object):
     def detectCycle(self, head):
         visited = set()
         curr = head
         while curr:
-            if curr in visited: return True
+            if curr in visited: return curr
             visited.add(curr)
             curr = curr.next
-        return False
+        return None
