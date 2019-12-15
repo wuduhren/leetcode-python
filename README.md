@@ -171,7 +171,7 @@ If you are new or know nothing about data structures and algorithms, I recommend
 
 2. [Architecture 101](https://engineering.videoblocks.com/web-architecture-101-a3224e126947)
 
-3. [How to scale up?](https://www.youtube.com/watch?v=yPF94QiI2qk&t=385s) There are also lots of tech interview related topic in his channel.
+3. [Systems Design Interview Concepts](https://www.youtube.com/watch?v=REB_eGHK_P4). There are also lots of tech interview related topic in his channel.
 
 4. [Narendra's Youtube Channel](https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists)
 
