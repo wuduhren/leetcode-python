@@ -24,7 +24,7 @@ I found it makes sense to solve similar problems together, so that we can recogn
 ### Recursion
 |  Id | Name | Difficulty |  |  |
 | ---: | --- | :---: | :---: | --- |
-|  726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms "Number of Atoms") | ★★★ | [736](https://leetcode.com/problems/parse-lisp-expression/ "736") | [394](https://zxi.mytechroad.com/blog/recursion/leetcode-394-decode-string/ "394") |
+|  726 | [Number of Atoms](https://leetcode.com/problems/number-of-atoms "Number of Atoms") | ★★★ | [736](https://leetcode.com/problems/parse-lisp-expression/ "736") | [394](https://leetcode.com/problems/decode-string/ "394") |
 |  856 | [Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/ "Score of Parentheses") | ★★★ |  |  |
 
 ### Divide and Conquer
@@ -84,6 +84,7 @@ I found it makes sense to solve similar problems together, so that we can recogn
 |  33 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array "Search in Rotated Sorted Array") | ★★★ | [81](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/ "81") | [153](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ "153") | [154](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii "154") | [162](https://leetcode.com/problems/find-peak-element "162") | [852](https://leetcode.com/problems/peak-index-in-a-mountain-array/ "852") | rotated / peak |
 |  69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx "Sqrt(x)") | ★★★ |  |  |  |  |  | upper_bound |
 |  74 | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/ "Search a 2D Matrix") | ★★★ |  |  |  |  |  | treat 2d as 1d |
+|  875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/ "Koko Eating Bananas") | ★★★ | [1011](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/ "1011") |  |  |  |  | guess ans and check |
 |  378 | [Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/ "Kth Smallest Element in a Sorted Matrix") | ★★★ | [668](https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/ "668") |  |  |  |  | kth + matrix |
 |  778 | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/ "Swim in Rising Water") | ★★★ | [174](https://leetcode.com/problems/dungeon-game/ "174") | [875](https://leetcode.com/problems/koko-eating-bananas/ "875") |  |  |  | guess ans and check |
 |  4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Median of Two Sorted Arrays") | ★★★★ |  |  |  |  |  |  |
@@ -114,6 +115,9 @@ I found it makes sense to solve similar problems together, so that we can recogn
 |  847 | [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/ "Shortest Path Visiting All Nodes") | ★★★★ | [815](https://leetcode.com/problems/bus-routes/ "815") | [864](https://leetcode.com/problems/shortest-path-to-get-all-keys/ "864") | [924](https://leetcode.com/problems/minimize-malware-spread/ "924") |  | BFS |
 |  943 | [Find the Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/ "Find the Shortest Superstring") | ★★★★ | [980](https://leetcode.com/problems/unique-paths-iii/ "980") | [996](https://leetcode.com/problems/number-of-squareful-arrays/ "996") |  |  | Hamiltonian path (DFS / DP) |
 |  959 | [Regions Cut By Slashes](https://leetcode.com/problems/regions-cut-by-slashes/ "Regions Cut By Slashes") | ★★★★ |  |  |  |  | union find / grid + connected component |
+|  332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/ "Reconstruct Itinerary") | ★★★★ |  |  |  |  | Eulerian path |
+|  1192 | [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/ "Critical Connections in a Network") | ★★★★ |  |  |  |  | Tarjan |
+
 
 ### Dynamic Programming
 |  Id | Name | Difficulty |  |  |  |  |  |  | Comments |
@@ -134,15 +138,24 @@ I found it makes sense to solve similar problems together, so that we can recogn
 |  62 | [Unique Paths](https://leetcode.com/problems/unique-paths "Unique Paths") | ★★ | [63](https://leetcode.com/problems/unique-paths-ii "63") | [64](https://leetcode.com/problems/minimum-path-sum "64") | [120](https://leetcode.com/problems/triangle "120") | [174](https://leetcode.com/problems/dungeon-game "174") | [931](https://leetcode.com/problems/minimum-falling-path-sum/ "931") |  | I: O(mn), S = O(mn), T = O(mn) |
 |  85 | [Maximal Rectangle](https://leetcode.com/problems/delete-operation-for-two-strings/ "Maximal Rectangle") | ★★★ | [221](https://leetcode.com/problems/maximal-square/ "221") | [304](https://leetcode.com/problems/range-sum-query-2d-immutable "304") |  |  |  |  |  |
 |  688 | [Knight Probability in Chessboard](https://leetcode.com/problems/knight-probability-in-chessboard/ "Knight Probability in Chessboard") | ★★★ | [576](https://leetcode.com/problems/out-of-boundary-paths/ "576") | [935](https://leetcode.com/problems/knight-dialer/ "935") |  |  |  |  | I: O(mn) + k, S = O(kmn) T = O(kmn) |
+|  322 | [Coin Change](https://leetcode.com/problems/reconstruct-itinerary/ "Coin Change") | ★★★ | [377](https://leetcode.com/problems/combination-sum-iv/ "377") | [416](https://leetcode.com/problems/partition-equal-subset-sum/ "416") | [494](https://leetcode.com/problems/target-sum/ "494") | [1043](https://leetcode.com/problems/partition-array-for-maximum-sum/ "1043") | [1049](https://leetcode.com/problems/last-stone-weight-ii/ "1049") |  | I: O(n) + k, S = O(n), T = O(kn) |
+|   |  |  | [1220](https://leetcode.com/problems/count-vowels-permutation/ "1220") | [1230](https://leetcode.com/problems/toss-strange-coins/ "1230") | [1262](https://leetcode.com/problems/greatest-sum-divisible-by-three/ "1262") | [1269](https://leetcode.com/problems/number-of-ways-to-stay-in-the-same-place-after-some-steps/ "1269") |  |  |
+|  813 | [Largest Sum of Averages](https://leetcode.com/problems/largest-sum-of-averages/ "Largest Sum of Averages") | ★★★★ | [1278](https://leetcode.com/problems/palindrome-partitioning-iii/ "1278") | [1335](https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/ "1335") | [410](https://leetcode.com/problems/split-array-largest-sum/ "410") |  |  |  | I: O(n) + k<br/>S = O(n*k), T = O(kn^2) |
+|  1223 | [Dice Roll Simulation](https://leetcode.com/problems/dice-roll-simulation/ "Dice Roll Simulation") | ★★★★ |  |  |  |  |  |  | I: O(n) + k + p<br/>S = O(k*p), T = O(n^2kp) |
+|  312 | [Burst Balloons](https://leetcode.com/problems/burst-balloons/ "Burst Balloons") | ★★★★ | [664](https://leetcode.com/problems/strange-printer/ "664") | [1024](https://leetcode.com/problems/video-stitching/ "1024") | [1039](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/ "1039") | [1140](https://leetcode.com/problems/stone-game-ii/ "1140") | [1130](https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/ "1130") |  | I: O(n), S = O(n^2), T = O(n^3) |
+|  741 | [Cherry Pickup](https://leetcode.com/problems/cherry-pickup/ "Cherry Pickup") | ★★★★ |  |  |  |  |  |  | I: O(n^2), S = O(n^3), T = O(n^3) |
+|  546 | [Remove Boxes](https://leetcode.com/problems/remove-boxes/ "Remove Boxes") | ★★★★★ |  |  |  |  |  |  | I: O(n), S = O(n^3), T = O(n^4) |
+|  943 | [Find the Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/ "Find the Shortest Superstring") | ★★★★★ | [980](https://leetcode.com/problems/unique-paths-iii/ "980") | [996](https://leetcode.com/problems/number-of-squareful-arrays/ "996") | [1125](https://leetcode.com/problems/smallest-sufficient-team/ "1125") |  |  |  | I: O(n)<br/>S = O(n*2^n), T = (n^2*2^n) |
 
 ### Advanced
 |  Id | Name | Difficulty |  |  |  |  |  | Comments |
 | ---: | --- | :---: | :---: | --- | --- | --- | --- | --- |
 |  208 | [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree "Implement Trie (Prefix Tree)") | ★★★ | [648](https://leetcode.com/problems/replace-words/ "648") | [676](https://leetcode.com/problems/implement-magic-dictionary "676") | [677](https://leetcode.com/problems/map-sum-pairs "677") | [720](https://leetcode.com/problems/longest-word-in-dictionary "720") | [745](https://leetcode.com/problems/prefix-and-suffix-search "745") | Trie |
 |  307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable "Range Sum Query - Mutable") | ★★★ |  |  |  |  |  | BIT/Segment Tree |
-|  901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span "Online Stock Span") | ★★★ | [907](https://leetcode.com/problems/sum-of-subarray-minimums "907") |  |  |  | 1019 | monotonic stack |
+|  901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span "Online Stock Span") | ★★★ | [907](https://leetcode.com/problems/sum-of-subarray-minimums "907") | [1019](https://leetcode.com/problems/next-greater-node-in-linked-list/ "1019") |  |  |  | Monotonic Stack |
+|  239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/ "Sliding Window Maximum") | ★★★ |  |  |  |  |  | Monotonic Queue |
 
-This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos).
+This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos). Please visit his [website](https://zxi.mytechroad.com/blog/leetcode-problem-categories/) for more.
 
 
 # Software Engineer Interview
