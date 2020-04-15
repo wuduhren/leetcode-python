@@ -23,5 +23,5 @@ class Solution(object):
 
 """
 Time complexity is O(N). Because we traverse all the nodes.
-Space complexity is O(LogN). The tree's height is about O(LogN), so we have O(LogN) level of recursion and used up O(LogN) of stack memory
+Space complexity is O(N). In the worst case, the recursion will go O(N) level deep.
 """
