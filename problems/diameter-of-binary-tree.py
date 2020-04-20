@@ -45,6 +45,9 @@ What we want to find?
 From an unknown node, that its max_depth_from_left (`l`) + max_depth_from_right (`r`) is the biggest.
 The node that generate this number could be from any node, so we iterate through every node to update `ans`.
 In other words, to find the answer, we need to check every node, if the max diameter pass through here.
+
+Time complexity is O(N), where N is the number of nodes.
+Space complexity is O(LogN), since we might got to LogN level on recursion.
 """
 
 # from collections import defaultdict
