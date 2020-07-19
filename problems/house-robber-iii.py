@@ -31,3 +31,4 @@ class Solution(object):
             return rob, not_rob
 
         return max(get_max_value(root))
+        
