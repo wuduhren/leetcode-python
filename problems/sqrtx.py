@@ -27,14 +27,8 @@ class Solution(object):
         return -1
 
 
-"""
-The answer must always be in l~r.
-In every iteration, we test the m, `m_sqr==x or (m_sqr<x and x<(m+1)**2)`.
-If not the answer, we adjust l or r.
 
-Time complexity: O(LogN).
-Space complexity: O(1).
-"""
+#2020/7/23
 class Solution(object):
     def mySqrt(self, x):
         l = 0
@@ -50,3 +44,13 @@ class Solution(object):
                 l = m+1
             else:
                 r = m-1
+
+
+"""
+The answer must always be in l~r.
+In every iteration, we test the m, `m_sqr==x or (m_sqr<x and x<(m+1)**2)`.
+If not the answer, we adjust l or r.
+
+Time complexity: O(LogN).
+Space complexity: O(1).
+"""
