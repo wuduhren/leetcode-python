@@ -35,3 +35,38 @@ class Solution(object):
                     r = r-1
                     l = l+1
         return False
+
+
+#2020/7/20, recursive.
+class Solution(object):
+    def search(self, nums, target):
+        def binary_search(l, r):
+            if l>r: return False
+            if nums[l]==target: return True
+            if nums[r]==target: return True
+
+            m = (l+r)/2
+            if nums[m]==target:
+                return m
+            if target<nums[m]:
+                return binary_search(l, m-1)
+            else:
+                return binary_search(m+1, r)
+        
+            if not nums: return False
+        
+        def helper(l, r):
+            if l>r: return False
+            if nums[l]==target: return True
+            if nums[r]==target: return True
+            if nums[l]<nums[r]: return binary_search(l+1, r-1)
+            
+            m = (l+r)/2
+            if nums[m]==target: return m
+
+            if helper(l+1, m-1): return True
+            if helper(m+1, r-1): return True
+            return False
+        
+        if not nums: return False
+        return helper(0, len(nums)-1)

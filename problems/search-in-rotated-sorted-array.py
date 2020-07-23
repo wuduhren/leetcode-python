@@ -131,3 +131,46 @@ class Solution(object):
 
 
 
+
+
+
+#2020/7/20, recursive.
+class Solution(object):
+    def search(self, nums, target):
+        def binary_search(l, r):
+            if l>r: return -1
+            if nums[l]==target: return l
+            if nums[r]==target: return r
+
+            m = (l+r)/2
+            if nums[m]==target:
+                return m
+            if target<nums[m]:
+                return binary_search(l, m-1)
+            else:
+                return binary_search(m+1, r)
+
+        if not nums: return -1
+
+        def helper(l, r):
+            if l>r: return -1
+            if nums[l]==target: return l
+            if nums[r]==target: return r
+            if nums[l]<=nums[r]: return binary_search(l+1, r-1)
+            
+            m = (l+r)/2
+            if nums[m]==target: return m
+
+            if nums[l]<nums[m]:
+                if nums[l]<target and target<nums[m]:
+                    return binary_search(l+1, m-1)
+                else:
+                    return helper(m+1, r)
+            else:
+                if nums[m]<target and target<nums[r]:
+                    return binary_search(m+1, r-1)
+                else:
+                    return helper(l, m-1)
+        
+        if not nums: return -1
+        return helper(0, len(nums)-1)

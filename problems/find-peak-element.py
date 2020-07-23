@@ -30,3 +30,29 @@ class Solution(object):
             r = nums[i+1] if (i+1)<len(nums) else float('-inf')
             if nums[i]>l and nums[i]>r: return i
         return None
+
+
+#2020/7/23
+class Solution(object):
+    def findPeakElement(self, nums):
+        l = 0
+        r = len(nums)-1
+        
+        while l<=r:
+            if l==r: return l
+            if nums[l]>nums[l+1]: return l #check l is peak
+            if nums[r-1]<nums[r]: return r #check r is peak
+            
+            m = (l+r)/2
+            
+            if nums[m]<nums[m+1]:
+                #m is in the falling slope
+                l = m
+            elif nums[m]>nums[m+1]:
+                #m is in the rising slope
+                r = m
+        return l
+                
+                
+            
+        

@@ -34,3 +34,42 @@ class Solution(object):
                 else:
                     break
         return m
+
+
+
+"""
+Pointer l and r is at the start and at the end of the list. [0]
+We only consider the numbers between l and r.
+
+If the list is already sorted, return the left most element. [1]
+
+Now, we cut the rotated array into half. l~m and m~r.
+Normally, one part will be sorted, the other half is not.
+The min must be in the unsorted part.
+So we move the pointer and do the same thing on the unsorted part. [2]
+
+One scenario to consider is that the cutting point, m, being the smallest element.
+This will cause both l~m and m~r to both be sorted.
+So we need to check it. [3]
+
+Time: O(LogN)
+Space: O(1)
+"""
+
+class Solution(object):
+    def findMin(self, nums):
+        if not nums: return 0
+        l = 0 #[0]
+        r = len(nums)-1 #[0]
+
+        while l<=r:
+            if nums[l]<=nums[r]: return nums[l] #[1]
+            
+            m = (l+r)/2
+            if m-1>=0 and nums[m-1]>nums[m]: return nums[m] #[3]
+            
+            if nums[l]<=nums[m]:
+                l = m+1 #[2]
+            else:
+                r = m-1 #[2]
+        return 0

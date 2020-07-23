@@ -25,3 +25,28 @@ class Solution(object):
             else:
                 r = m-1
         return -1
+
+
+"""
+The answer must always be in l~r.
+In every iteration, we test the m, `m_sqr==x or (m_sqr<x and x<(m+1)**2)`.
+If not the answer, we adjust l or r.
+
+Time complexity: O(LogN).
+Space complexity: O(1).
+"""
+class Solution(object):
+    def mySqrt(self, x):
+        l = 0
+        r = x
+        
+        while l<=r:
+            m = (l+r)/2
+            m_sqr = m**2
+            
+            if m_sqr==x or (m_sqr<x and x<(m+1)**2):
+                return m
+            elif m_sqr<x:
+                l = m+1
+            else:
+                r = m-1
