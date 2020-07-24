@@ -47,3 +47,51 @@ class Solution(object):
             else:
                 l = p+1
         return False
+
+
+#2020/7/23
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        if not matrix or not matrix[0]: return False
+        
+        #if you do not understand binary search yet, please study it first.
+        #use binary search to find the list that has target.
+        #if found, asign it to A.
+        l = 0
+        r = len(matrix)-1
+        A = None
+        while l<=r:
+            if matrix[l][0]<=target and target<=matrix[l][-1]:
+                A = matrix[l]
+                break
+            if matrix[r][0]<=target and target<=matrix[r][-1]:
+                A = matrix[r]
+                break
+            
+            m = (l+r)/2
+            
+            if matrix[m][0]<=target and target<=matrix[m][-1]:
+                A = matrix[m]
+                break
+            elif target<matrix[m][0]:
+                r = m-1
+            else:
+                l = m+1
+        
+        if not A: return False
+        
+        #find if target in A
+        l = 0
+        r = len(A)-1
+        while l<=r:
+            if target==A[l] or target==A[r]: return True
+            
+            m = (l+r)/2
+            
+            if target==A[m]:
+                return True
+            elif target<A[m]:
+                r = m-1
+            else:
+                l = m+1
+        return False
