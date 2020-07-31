@@ -18,14 +18,16 @@ class Solution(object):
             if daily_weight: d += 1
 
             if d>D:
-                #K cannot be the answer.
-                #next round we don't need to put K in l~r.
+                #c cannot be the answer.
+                #next round we don't need to put c in l~r.
                 l = c+1
             else:
-                #K might ot might not be the answer.
-                #next round we still need to put K in l~r.
+                #c might ot might not be the answer.
+                #next round we still need to put c in l~r.
                 r = c
         return l
+
+
 
 """
 This is a binary search problem.
@@ -43,6 +45,12 @@ Note that, even if `d<=D`, we still need to see if there are any smaller `d`.
 [2]
 So the boundary of our answer, `l` and `r`, will collides together (`l==r`) and jump out of the loop.
 
-Time complexity: `O(NlogN)`. There will be `O(LogN)` iteration. For every iteration we need O(N) to calculate the `t`. `N` is the length of `piles`.
-Space complexity is O(N). For calculating `t`.
+Time complexity: `O(NlogW)`.
+`N` is the number of `weights`.
+`W` is the max weight.
+There will be `O(LogW)` iteration. For every iteration we need O(N) to calculate the `d`. 
+Space complexity is O(1).
+
+Also take a look at problem, 875, very similar.
+https://leetcode.com/problems/koko-eating-bananas/discuss/750699/
 """

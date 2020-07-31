@@ -29,16 +29,10 @@ class Solution(object):
 	#recursive
     def isValidBST(self, root):
         def helper(node, min_val, max_val):
-            if node==None:
-                return True
-            if node.val<=min_val or node.val>=max_val:
-                return False
-            
-            left_valid = helper(node.left, min_val, node.val)
-            if not left_valid: return False
-            right_valid = helper(node.right, node.val, max_val)
-            if not right_valid: return False
-            
+            if not node: return True
+            if node.val<=min_val or node.val>=max_val:return False
+            if not helper(node.left, min_val, node.val): return False
+            if not helper(node.right, node.val, max_val): return False
             return True
         return helper(root, float('-inf'), float('inf'))
 
