@@ -32,3 +32,28 @@ class Solution(object):
             curr_copy = curr_copy.next
             
         return head_copy
+
+# 2020/8/11
+class Solution(object):
+    def copyRandomList(self, head):
+        if not head: return head
+        
+        clones = {}
+        
+        curr = head
+        while curr:
+            clones[curr] = Node(curr.val)
+            curr = curr.next
+        
+        curr = head
+        while curr:
+            if curr.next: clones[curr].next = clones[curr.next]
+            if curr.random: clones[curr].random = clones[curr.random]
+            curr = curr.next
+        
+        return clones[head]
+
+"""
+Time: O(N). Two iteration. First iteration make a the clones. Second iteration setup the links.
+Space: O(1). No extra space except the cloned node.
+"""
