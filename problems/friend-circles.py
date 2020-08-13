@@ -73,3 +73,37 @@ class Solution(object):
 M = [[1,0,0,1],[0,1,1,0],[0,1,1,1],[1,0,1,1]]
 s = Solution()
 s.findCircleNum(M)
+
+
+
+# 2020/8/12
+class Solution(object):
+    def findCircleNum(self, M):
+        if not M or not M[0]: return 0
+        count = 0
+        visited = set()
+        
+        for student in xrange(len(M)):
+            if student in visited: continue
+            
+            count += 1
+
+            #dfs
+            stack = [student]
+            while stack:
+                curr_student = stack.pop()
+                if curr_student in visited: continue
+                visited.add(curr_student)
+                stack.extend([class_mate for class_mate, is_friend in enumerate(M[curr_student]) if is_friend])
+                
+        return count
+
+"""
+If you don't know, DFS, please figure it out then come back.
+
+For every `student`, we use DFS to find all of his direct friends. And put them into `visited`.
+Every time we perform a DFS means putting an entire friend circle into `visited`.
+
+Time Complexity: O(N).
+Space Complexity: O(N).
+"""
