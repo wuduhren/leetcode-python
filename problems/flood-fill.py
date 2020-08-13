@@ -15,3 +15,13 @@ class Solution(object):
             if 0<=j-1: stack.append((i, j-1))
 
         return image
+
+"""
+DFS the `image`.
+If the color is newColor, we don't need to see.
+If the color is not originalColor, we don't need to see, too.
+Else we paint the node to newColor.
+
+Time: O(N).
+Space: O(1).
+"""
