@@ -66,7 +66,7 @@ If we encounter a new element with larger `curr_count`, we reset the `ans`.
 With the help of `prev_val` we can know that `curr_node` is the same to the previous or not.
 If not, its a new element, we need to reset the `curr_count`.
 
-Time: O(N). Space: O(1)
+Time: O(N). Space: O(LogN)
 
 For better understanding, below is a template for inorder traverse.
 """
