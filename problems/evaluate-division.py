@@ -56,3 +56,42 @@ class Solution(object):
 
         return [findVal(query) for query in queries]
 
+
+from collections import defaultdict
+
+class Solution(object):
+    def calcEquation(self, equations, values, queries):
+		#using DFS
+        def find_val(n1, n2):
+            if n1 not in graph or n2 not in graph: return -1
+            if n1==n2: return 1
+            if n2 in graph[n1]: return graph[n1][n2]
+                
+            stack = [(n1, 1)]
+            visited = set()
+            
+            while stack:
+                n, v = stack.pop() #v is the val of n1/n
+				
+                if n in visited: continue
+                visited.add(n)
+                
+                if n==n2:
+                    graph[n1][n2] = v
+                    return v
+                
+                stack.extend([(next_n, v*graph[n][next_n]) for next_n in graph[n]])
+            return -1
+        
+        #build graph
+        graph = defaultdict(dict)
+        for i, v in enumerate(values):
+            n1, n2 = equations[i][0], equations[i][1]
+            graph[n1][n2] = v
+            graph[n2][n1] = 1/v
+        
+        ans = []
+        for n1, n2 in queries:
+            ans.append(find_val(n1, n2))
+            
+        return ans
