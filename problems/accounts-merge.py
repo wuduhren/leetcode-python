@@ -16,7 +16,7 @@ class Solution(object):
         for data in accounts:
             name = data[0]
             visited = set()
-            stack = [data[1]]
+            stack = [data[1]] #[2]
 
             if data[1] in merged: continue #[1]
             
@@ -27,7 +27,7 @@ class Solution(object):
                 stack.extend(graph[e])
             
             merged.update(visited)
-            ans.append([name]+sorted(list(visited)))
+            ans.append([name]+sorted(list(visited))) #[3]
         
         return ans
 
@@ -40,8 +40,8 @@ First, lets check if the first email is already merged. [1]
 If the first email is already merged to other groups, then other emails will be in another group as well.
 So don't need to check.
 
-Second, do a DFS starting from the first email. Put all the connected nodes into visited.
-And append it to the ans with name.
+Second, do a DFS starting from the first email. Put all the connected nodes into visited. [2]
+And append the sorted(visited) to the ans with name. [3]
 
 Let N be the total number of emails. M be the total number of final groups.
 Build the graph takes O(N).
