@@ -1,37 +1,95 @@
+#DFS
 """
-We use the `roots` to store the root of each node.
-For example, at index 1 value is 5, means that node1's root is node5.
-
-We use `find()` to find the node's root. In other words, the node's parent's parent's ...
-Every node we encounter along the way, we update their root value in `roots` to the up most root. (This technique is called path compression).
-
-So, for every edge, we unify `u` and `v` them. #[1]
-Which means u and v and all of their parents all lead to one root.
-
-If u's root (`ur`) and v's root (`vr`) are already the same before we unify them.
-This edge is redundant.
-
-This algorithm is called Union Find, often used in undirected graph cycle detect or grouping.
-If you wanted to detect cycles in directed graph, you need to use Topological sort.
+For each edge (u, v), traverse the graph with a depth-first search to see if we can connect u to v. If we can, then it must be the duplicate edge.
+Time Complexity: O(N^2)
+Space Complexity: O(N)
 """
+from collections import defaultdict
+
 class Solution(object):
     def findRedundantConnection(self, edges):
-        def find(x):
-            if x != roots[x]:
-                roots[x] = find(roots[x])
-            return roots[x]
-
-        opt = []
-        roots = range(len(edges))
-
+        def dfs(u, v):
+            seen = set()
+            stack = []
+            stack.append(u)
+            
+            while stack:
+                node = stack.pop()
+                seen.add(node)
+                
+                if v in G[node]: return True
+                
+                for nei in G[node]:
+                    if nei not in seen:
+                        stack.append(nei)
+            return False
+            
+        G = defaultdict(set)
+        
         for u, v in edges:
-            # union
-            ur = find(u)
-            vr = find(v)
+            if u in G and v in G and dfs(u, v): return u, v
+            G[u].add(v)
+            G[v].add(u)
 
-            if ur == vr: #[2]
-                opt = [u, v]
-            else:
-                roots[vr] = ur #[1]
+#Disjoint Set Union
+"""
+For Disjoint Set Union, see
+https://www.youtube.com/watch?v=ID00PMy0-vE
+Time Complexity: O(N)
+Space Complexity: O(N)
+"""
+class DSU(object):
+    def __init__(self):
+        self.parant = range(1001)
+        self.rank = [0]*1001
+    
+    def find(self, x):
+        if self.parant[x]!=x:
+            self.parant[x] = self.find(self.parant[x])
+        return self.parant[x]
 
-        return opt
+    def union(self, x, y):
+        xr, yr = self.find(x), self.find(y)
+        if xr==yr:
+            return False
+        elif self.rank[xr]>self.rank[yr]:
+            self.parant[yr] = xr
+            self.rank[xr] += 1
+        else:
+            self.parant[xr] = yr
+            self.rank[yr] += 1
+        return True
+
+class Solution(object):
+    def findRedundantConnection(self, edges):
+        dsu = DSU()
+        for edge in edges:
+            if not dsu.union(*edge):
+                return edge
+
+#Disjoint Set Union without Ranking
+"""
+Time Complexity: O(N)
+Space Complexity: O(N)
+"""
+class DSU(object):
+    def __init__(self):
+        self.parant = range(1001)
+    
+    def find(self, x):
+        if self.parant[x]!=x:
+            self.parant[x] = self.find(self.parant[x])
+        return self.parant[x]
+
+    def union(self, x, y):
+        xr, yr = self.find(x), self.find(y)
+        if xr==yr: return False
+        self.parant[yr] = xr
+        return True
+
+class Solution(object):
+    def findRedundantConnection(self, edges):
+        dsu = DSU()
+        for edge in edges:
+            if not dsu.union(*edge):
+                return edge
