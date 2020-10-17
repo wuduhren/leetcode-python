@@ -53,3 +53,28 @@ class Solution(object):
                     
         return max(dis.values()) if len(dis)==N else -1 #[5]
 
+
+#2020/10/17
+class Solution(object):
+    def networkDelayTime(self, times, N, K):
+        ans = float('-inf')
+        h = [(0, K)]
+        visited = set()
+        G = collections.defaultdict(list)
+        
+        for u, v, w in times:
+            G[u].append((v, w))
+        
+        while h:
+            time, node = heapq.heappop(h)
+            
+            if node in visited: continue
+            visited.add(node)
+            ans = max(ans, time)
+            
+            if len(visited)==N: return time
+            for nei, time_to_nei in G[node]:
+                heapq.heappush(h, (time+time_to_nei, nei))
+        
+        return -1
+
