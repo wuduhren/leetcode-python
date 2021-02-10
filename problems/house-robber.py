@@ -27,3 +27,30 @@ class Solution(object):
         		else: #[2]
         			K[i] = K[i-1]+nums[i]
         return K[-1]
+
+#2020/11/14
+class Solution(object):
+    def rob(self, nums):
+        def helper(i):
+            if i>=len(nums): return 0
+            if i in history: return history[i]
+            history[i] = max(nums[i]+helper(i+2), helper(i+1))
+            return history[i]
+        
+        history = {}
+        return helper(0)
+
+#2020/11/14
+class Solution(object):
+    def rob(self, nums):
+        if not nums: return 0
+        if len(nums)==0 or len(nums)==1: return max(nums)
+        
+        last1 = max(nums[0], nums[1])
+        last2 = nums[0]
+        
+        for i in xrange(len(nums)):
+            if i==0 or i==1: continue
+            last2, last1 = last1, max(nums[i]+last2, last1)
+            
+        return last1

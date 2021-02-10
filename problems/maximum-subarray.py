@@ -20,3 +20,16 @@ class Solution(object):
         for i in xrange(1, len(nums)):
             maxCurrent.append(max(nums[i], nums[i]+maxCurrent[-1])) #[0]
         return max(maxCurrent) #[2]
+
+# 2020/11/14
+class Solution(object):
+    def maxSubArray(self, nums):
+        ans = nums[0]
+        last_max = nums[0]
+        
+        for i in xrange(len(nums)):
+            if i==0: continue
+            last_max = max(nums[i], nums[i]+last_max)
+            ans = max(ans, last_max)
+            
+        return ans
