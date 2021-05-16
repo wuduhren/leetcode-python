@@ -13,10 +13,14 @@ class Solution(object):
         
         return ans
 
+"""
+dp[i][j] = number of ways to sum to j using nums[0~i-1]
+Time: O(SN)
+Space: O(SN)
+"""
+
+
 import collections
-
-
-
 class Solution(object):
     def findTargetSumWays(self, nums, target):
         S = sum(nums)

@@ -1,5 +1,5 @@
 """
-dp[i] = maxSumAfterPartitioning(A[0~i-1], K) and must contain A[i-1]
+dp[i] = max(k*max(A[i-k]~A[i]) + dp[i-k]) for k in 1~K.
 """
 class Solution(object):
     def maxSumAfterPartitioning(self, A, K):

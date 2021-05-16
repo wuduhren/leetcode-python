@@ -11,6 +11,9 @@ https://github.com/wuduhren/leetcode-python
 For example, `merge-sorted-array.py`'s solution is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 
+# Leetcode 74 Classic Problem
+https://leetcode.com/list/?selectedList=535ukjh5
+
 # Leetcode Similar Problems
 I found it makes sense to solve similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
 
@@ -187,6 +190,8 @@ If you are new or know nothing about data structures and algorithms, I recommend
 3. [Systems Design Interview Concepts](https://www.youtube.com/watch?v=REB_eGHK_P4). There are also lots of tech interview related topic in his channel.
 
 4. [Narendra's Youtube Channel](https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/playlists)
+
+5. [System Design Primer](https://github.com/donnemartin/system-design-primer)
 
 
 # Knowledge Base Question
