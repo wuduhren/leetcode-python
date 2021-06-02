@@ -19,3 +19,15 @@ class Solution(object):
                 wanted[target-n] = i #[0]
         return []
 
+
+
+#2021/5/17
+class Solution(object):
+    def twoSum(self, nums, target):
+        M = {} #counter part number needed by index i: i
+        
+        for i, num in enumerate(nums):
+            if num in M: return (M[num], i)
+            M[target-num] = i
+        
+        return False

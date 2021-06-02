@@ -33,3 +33,17 @@ class Solution(object):
             mark[char_now] = i
                 
         return counter
+
+
+#2021/5/17
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        lastSeen = {}
+        start = 0
+        maxLength = 0
+        for i, c in enumerate(s):
+            if c in lastSeen: start = max(start, lastSeen[c]+1)
+            lastSeen[c] = i
+            maxLength = max(maxLength, i-start+1)
+            
+        return maxLength

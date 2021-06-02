@@ -25,5 +25,38 @@ class Solution(object):
 
 """
 Time: O(N^2)
-Spance: O(1)
+Spance: O(N)
+"""
+
+
+class Solution(object):
+    def findNumberOfLIS(self, nums):
+        dp = [1]*len(nums)
+        count = [1]*len(nums)
+        count[0] = 1
+        
+        for i in xrange(1, (len(nums))):
+            for j in xrange(i-1, -1, -1):
+                if nums[i]>nums[j]:
+                    if dp[j]+1>dp[i]:
+                        count[i] = count[j]
+                        dp[i] = dp[j]+1
+                    elif dp[j]+1==dp[i]:
+                        count[i]+=count[j]       
+        print count
+        
+        maxLis = max(dp)
+        ans = 0
+        for i, lis in enumerate(dp):
+            if lis==maxLis: ans += count[i]
+        
+        return ans
+"""
+dp[i] := longest increasing subsequence that ends at nums[i]
+count[i] := number of comfination that ends up dp[i].
+
+dp[i] = max{ dp[j] where nums[i]>nums[j], j = 0~i-1 } + 1
+
+Time: O(N^2)
+Space: O(N)
 """
