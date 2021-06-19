@@ -32,4 +32,27 @@ class Solution(object):
                 dp[i][j] = dp[i-1][j+nums[i-1]] + dp[i-1][j-nums[i-1]]
         
         return dp[len(nums)][target]
+
+
+#2021/6/7
+"""
+dp[i][t] := number of ways nums[:i] can sum up to t applying + or -.
+For all i, calculate all posible target (From minTarget~maxTarget)
+"""
+class Solution(object):
+    def findTargetSumWays(self, nums, target):
+        N = len(nums)
+        maxTarget = sum(nums)
+        minTarget = -maxTarget
         
+        if target<minTarget or target>maxTarget: return 0
+        
+        dp = [[0 for _ in xrange(minTarget, maxTarget+1)] for _ in xrange(N+1)]
+        
+        dp[0][0] = 1
+        
+        for i in xrange(1, N+1):
+            for t in xrange(minTarget, maxTarget+1):
+                dp[i][t] = (dp[i-1][t-nums[i-1]] if t-nums[i-1]>=minTarget else 0) + (dp[i-1][t+nums[i-1]] if t+nums[i-1]<=maxTarget else 0)
+        
+        return dp[N][target]

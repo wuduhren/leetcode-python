@@ -41,4 +41,26 @@ class Solution(object):
             max_pal = p2 if len(p2)>len(max_pal) else max_pal
             
         return max_pal
+
+
+#2021/6/18 DP TLE
+"""
+dp[i][j] := if s[i:j+1] is palindrom
+"""
+class Solution(object):
+    def longestPalindrome(self, s):
+        if not s: return s
         
+        N = len(s)
+        dp = [[False for _ in xrange(N+1)] for _ in xrange(N+1)]
+        for i in xrange(N+1): dp[i][i] = True
+        ans = s[0]    
+        
+        for l in xrange(2, N+1):
+            for i in xrange(1, N+1):
+                j = i+l-1
+                if j>N: continue
+                dp[i][j] = s[i-1]==s[j-1] and (dp[i+1][j-1] or j-1<i+1)
+                if dp[i][j]: ans = s[i-1:j]
+        
+        return ans
