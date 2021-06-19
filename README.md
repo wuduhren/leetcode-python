@@ -11,10 +11,13 @@ https://github.com/wuduhren/leetcode-python
 For example, `merge-sorted-array.py`'s solution is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 
-# Leetcode 74 Classic Problem
-https://leetcode.com/list/?selectedList=535ukjh5
+# Leetcode Problem Lists
+* https://leetcode.com/list/?selectedList=535ukjh5 (Only 74 problems)
+* https://www.programcreek.com/2013/08/leetcode-problem-classification/
+* https://github.com/wisdompeak/LeetCode
+* Below [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos). Please visit his [website](https://zxi.mytechroad.com/blog/leetcode-problem-categories/) for more.
 
-# Leetcode Similar Problems
+# Similar Problems
 I found it makes sense to solve similar problems together, so that we can recognize the problem faster when we encounter a new one. My suggestion is to skip the HARD problems when you first go through these list.
 
 ### Two Pointers
@@ -157,8 +160,6 @@ I found it makes sense to solve similar problems together, so that we can recogn
 |  307 | [Range Sum Query - Mutable](https://leetcode.com/problems/range-sum-query-mutable "Range Sum Query - Mutable") | ★★★ |  |  |  |  |  | BIT/Segment Tree |
 |  901 | [Online Stock Span](https://leetcode.com/problems/online-stock-span "Online Stock Span") | ★★★ | [907](https://leetcode.com/problems/sum-of-subarray-minimums "907") | [1019](https://leetcode.com/problems/next-greater-node-in-linked-list/ "1019") |  |  |  | Monotonic Stack |
 |  239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/ "Sliding Window Maximum") | ★★★ |  |  |  |  |  | Monotonic Queue |
-
-This [list](https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=126913158) is made by **huahua**, I found this on his [youtube](https://www.youtube.com/user/xxfflower/videos). Please visit his [website](https://zxi.mytechroad.com/blog/leetcode-problem-categories/) for more.
 
 
 # Software Engineer Interview
