@@ -19,3 +19,22 @@ class Solution(object):
                 nums[cursor] = nums[i]
                 nums[i] = temp
                 cursor+=1
+
+
+"""
+j is the index to insert when a number not equal to 0.
+After all the non-zero numbers are inplace, the rests are all zeros.
+"""
+class Solution(object):
+    def moveZeroes(self, nums):
+        j = 0
+        
+        for n in nums:
+            if n!=0:
+                nums[j] = n
+                j += 1
+        
+        for i in xrange(j, len(nums)):
+            nums[i] = 0
+        
+        return nums
