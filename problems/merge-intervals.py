@@ -14,11 +14,24 @@ we don't need to do anything, just put it in the array
 class Solution(object):
     def merge(self, intervals):
         result = []
-        intervals.sort(key=lambda x: x.start) #[1]
+        intervals.sort() #[1]
         
         for inter in intervals:
-            if len(result)>0 and result[-1].end>=inter.start: #[2]
-                result[-1].end = max(result[-1].end, inter.end) #[3]
+            if len(result)>0 and result[-1][1]>=inter[0]: #[2]
+                result[-1][1] = max(result[-1][1], inter[1]) #[3]
             else: #[4]
                 result.append(inter) 
         return result
+        
+
+class Solution(object):
+    def merge(self, intervals):
+        intervals.sort()
+        
+        i = 0
+        while i<len(intervals)-1:
+            if intervals[i][1]>=intervals[i+1][0]:
+                intervals = intervals[:i] + [[min(intervals[i][0], intervals[i+1][0]), max(intervals[i][1], intervals[i+1][1])]] + intervals[i+2:]
+            else:
+                i += 1
+        return intervals

@@ -37,3 +37,48 @@ class Solution(object):
             t = t*nums[i] #[4]
             
         return output
+
+"""
+Time: O(N)
+Space: O(N)
+
+left[i] := product of all the element left to nums[i]
+right[i] := product of all the element right to nums[i]
+"""
+class Solution(object):
+    def productExceptSelf(self, nums):
+        N = len(nums)
+        
+        left = [1]*N
+        for i in xrange(1, len(nums)):
+            left[i] = left[i-1] * nums[i-1]
+        
+        right = [1]*N
+        for i in xrange(N-2, -1, -1):
+            right[i] = right[i+1] * nums[i+1]
+        
+        ans = []
+        for i in xrange(N):
+            ans.append(left[i]*right[i])
+        return ans
+
+"""
+Time: O(N)
+Space: O(1)
+"""
+class Solution(object):
+    def productExceptSelf(self, nums):
+        N = len(nums)
+        
+        #[1]
+        opt = [1]*N
+        for i in xrange(1, len(nums)):
+            opt[i] = opt[i-1] * nums[i-1]
+        
+        #[2]
+        t = 1
+        for i in xrange(N-2, -1, -1):
+            t *= nums[i+1]
+            opt[i] *= t
+        
+        return opt
