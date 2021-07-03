@@ -39,3 +39,47 @@ class Solution:
                 hashtag-=1
             i-=1
         return c, i
+"""
+Time: O(N)
+Space: O(1)
+"""
+class Solution(object):
+    def backspaceCompare(self, s1, s2):
+        i = len(s1)-1
+        j = len(s2)-1
+        c1 = 0 #s1 unprocessed backspace count
+        c2 = 0 #s2 unprocessed backspace count
+        
+        while i>=0 or j>=0:
+            while i>=0:
+                if s1[i]=='#':
+                    c1 += 1
+                    i -= 1
+                elif c1>0:
+                    c1 -= 1
+                    i -= 1
+                else:
+                    break
+            
+            while j>=0:
+                if s2[j]=='#':
+                    c2 += 1
+                    j -= 1
+                elif c2>0:
+                    c2 -= 1
+                    j -= 1
+                else:
+                    break
+            
+            # if one of the string is finished, the other one should be finished, too.
+            if i<0: return j<0
+            if j<0: return i<0
+            
+            
+            if s1[i]!=s2[j]: return False
+            
+            i -= 1
+            j -= 1
+            
+        return True
+        
