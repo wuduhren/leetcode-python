@@ -31,3 +31,15 @@ class Solution(object):
             M[target-num] = i
         
         return False
+
+#2021/7/4
+class Solution(object):
+    def twoSum(self, nums, target):
+        memo = {} #{key : value} := {"counter part needed for n" : "index of n"}
+        
+        for i, n in enumerate(nums):
+            if n in memo:
+                return [memo[n], i]
+            else:
+                memo[target-n] = i
+        return []

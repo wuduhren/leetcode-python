@@ -102,3 +102,104 @@ class Solution(object):
 
         return res
     """
+
+
+
+#2021/7/5
+"""
+Hash Table
+Time: O(N^2)
+Space: O(N)
+
+memo := {num:[index1, index2,...]}
+Iterate through every i and j, see if the required number exist in memo.
+"""
+import collections
+class Solution(object):
+    def threeSum(self, nums):
+        memo = collections.defaultdict(list)
+        N = len(nums)
+        ans = set()
+        
+        for k in xrange(N):
+            memo[nums[k]].append(k)
+        
+        for i in xrange(N):
+            for j in xrange(i+1, N):
+                t = (nums[i]+nums[j])*-1
+                
+                for k in memo[t]:
+                    if k!=i and k!=j:
+                        ans.add(tuple(sorted([nums[i], nums[j], nums[k]])))
+                        break
+        return ans
+
+"""
+Two Pointers
+Time: O(N^2)
+Space: O(1)
+
+Sort the nums.
+Iterate through i.
+j = i+1 and k = N-1, see if the sum s equals to 0.
+if s>0, means that we need to reduce the s and it can only be done by decreasing k.
+if s<0, means that we need to increase the s and it can only be done by increasing j.
+"""
+class Solution(object):
+    def threeSum(self, nums):
+        nums.sort()
+        ans = set()
+        N = len(nums)
+        
+        for i in xrange(N):
+            j = i+1
+            k = N-1
+            
+            while j<k:
+                s = nums[i]+nums[j]+nums[k]
+                if s>0:
+                    k -= 1
+                elif s<0:
+                    j += 1
+                else:
+                    ans.add(tuple(sorted([nums[i], nums[j], nums[k]])))
+                    k -= 1
+                    j += 1
+                    
+        return ans
+
+"""
+Two Pointers
+Time: O(N^2)
+Space: O(1)
+
+Same as above. Move pointers to avoid repeation. Faster.
+"""
+class Solution(object):
+    def threeSum(self, nums):
+        nums.sort()
+        ans = []
+        N = len(nums)
+        
+        for i in xrange(N):
+            j = i+1
+            k = N-1
+            
+            if i>0 and nums[i]==nums[i-1]: continue #[1]
+            
+            while j<k:
+                s = nums[i]+nums[j]+nums[k]
+                
+                if s>0:
+                    k -= 1
+                elif s<0:
+                    j += 1
+                else:
+                    ans.append([nums[i], nums[j], nums[k]])
+                    
+                    while j<k and nums[k]==nums[k-1]: k -= 1 #[2]
+                    while j<k and nums[j]==nums[j+1]: j += 1 #[3]
+                    k -= 1
+                    j += 1
+                    
+        return ans
