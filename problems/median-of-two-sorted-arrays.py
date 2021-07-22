@@ -24,7 +24,7 @@ We only need to use binary search to find the right `i` that matches
 ```python
 max_left_A<=min_right_B and max_left_B<=min_right_A
 ```
-And if `min_right_B<max_left_A`, it means that `i` is too large, so we adjust the upper limit of `i`, that is `h = i-1`.
+And if `min_right_B<max_left_A`, it means that `i` is too large, so we adjust the upper limit of `i`, that is `r = i-1`.
 Otherwise it means that `i` is too small, so we adjust the lower limit of `i`, that is `l = i+1`.
 
 Edge cases.
@@ -55,10 +55,10 @@ class Solution(object):
         if len(A)>len(B): A, B = B, A #[0]
 
         M, N = len(A), len(B)
-        l, h = 0, M
+        l, r = 0, M
 
-        while l<=h:
-            i = (h+l)/2
+        while l<=r:
+            i = (r+l)/2
             j = (M+N)/2-i #[1]
 
             max_left_A = A[i-1] if i>0 else float('-inf') #[2]
@@ -73,7 +73,7 @@ class Solution(object):
                 else:
                     return min(min_right_A, min_right_B) #[1]
             elif min_right_B<max_left_A:
-                h = i-1
+                r = i-1
             else:
                 l = i+1
         return None
@@ -130,12 +130,12 @@ class Solution(object):
         M, N = len(X), len(Y)
 
         after = (M+N-1)/2
-        l, h = 0, M
+        l, r = 0, M
 
-        while l<h:
-            i = (l+h)/2
+        while l<r:
+            i = (l+r)/2
             if after-i-1 < 0 or X[i] >= Y[after-i-1]:
-                h = i
+                r = i
             else:
                 l = i + 1
         i = l

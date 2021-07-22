@@ -76,6 +76,44 @@ class Solution(object):
         return 0
 
 
+#2021/7/17
+"""
+Time: O(logN)
+Space: O(1)
+"""
+class Solution(object):
+    def searchInsert(self, A, T):
+        if not A: return 0
+        
+        N = len(A)
+        r = N-1
+        l = 0
 
+        #we are going to check the element within l and r by constantly narrow down l and r.z 
+        while l<=r:
+            m = (l+r)/2
+            
+            if A[l]==T: return l
+            if A[m]==T: return m
+            if A[r]==T: return r
+            
+            #check if the target is out of range.
+            if A[r]<T: return r+1
+            if T<A[l]: return l
+            
+            #using `m` to navigate `l` and `r`.
+            #if the value on the pivot is larger then the target, we search the left-half.
+            #if the value on the pivot is smaller then the target, we search the right-half.
+            if T<A[m]:
+                r = m-1
+            else:
+                l = m+1
+        
+        return "Error"
+
+
+class Solution(object):
+    def searchInsert(self, A, T):
+        return bisect.bisect_left(A, T)
 
 

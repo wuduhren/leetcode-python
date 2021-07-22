@@ -44,7 +44,7 @@ We only consider the numbers between l and r.
 If the list is already sorted, return the left most element. [1]
 
 Now, we cut the rotated array into half. l~m and m~r.
-Normally, one part will be sorted, the other half is not.
+One part will be sorted, the other half is not.
 The min must be in the unsorted part.
 So we move the pointer and do the same thing on the unsorted part. [2]
 
@@ -73,3 +73,38 @@ class Solution(object):
             else:
                 r = m-1 #[2]
         return 0
+
+
+#2021/7/18
+"""
+Pointer l and r is at the start and at the end of the list.
+We only consider the numbers between l and r.
+
+If the list is already sorted, return the left most element. [0]
+If the list is unsorted, one of the part l~m or m~r will be sorted and the other will be unsorted.
+
+The MIN will be in the unsorted part.
+Adjust l and r and repeat the above process.
+
+Time: Log(N)
+Space: O(1)
+"""
+class Solution(object):
+    def findMin(self, nums):
+        N = len(nums)
+        
+        l = 0
+        r = N-1
+        
+        while l<=r:
+            m = (l+r)/2
+            
+            if nums[l]<=nums[m] and nums[m]<=nums[r]: return nums[l] #[0]
+            
+            if nums[l]>nums[m]:
+                #l~m is unsorted
+                r = m
+            else:
+                #m~r is unsorted
+                #in this case, we already sure that current m is not the MIN, so we can +1 to speed up and avoid infinitive loop
+                l = m+1

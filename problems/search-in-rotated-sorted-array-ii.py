@@ -70,3 +70,62 @@ class Solution(object):
         
         if not nums: return False
         return helper(0, len(nums)-1)
+
+
+"""
+Time: O(LogN). Worse Case: O(N).
+Space: O(1)
+
+The key idea for most rotated array question is that
+If you cut the array into half,
+One of the half will be rotated and one half will be in-order.
+OR
+Both of them are in-order (if you are lucky)
+"""
+class Solution(object):
+    def search(self, A, T):
+        N = len(A)
+        l = 0
+        r = N-1
+        
+        while l<=r:
+
+            #skip repeated numbers
+            while r>0 and A[r]==A[r-1]: r -= 1
+            while l<N-1 and A[l]==A[l+1]: l += 1
+            while r>0 and A[l]==A[r]: r -= 1
+            while l<N-1 and A[l]==A[r]: l += 1
+            
+            m = (l+r)/2
+            
+            if A[l]==T or A[m]==T or A[r]==T: return True
+            
+            if A[l]<=A[m] and A[m]<=A[r]:
+                #l~r is in-order, standard binary search.
+                if T<A[l] or T>A[r]: return False #out of range l~r
+                
+                if A[m]<T:
+                    l = m+1
+                else:
+                    r = m-1
+            elif A[l]<=A[m]:
+                #l~m is in-order
+
+                if A[l]<T and T<A[m]:
+                    #T is in l~m, so search in l~m
+                    r = m-1
+                else:
+                    #T is not in l~m, so search in m~r
+                    l = m+1
+            else:
+                #m~r is in-order
+
+                if A[m]<T and T<A[r]:
+                    #T is in m~r, so search m~r
+                    l = m+1
+                else:
+                    #T is not in m~r, so search in l~m
+                    r = m-1
+        
+        return False
+        
