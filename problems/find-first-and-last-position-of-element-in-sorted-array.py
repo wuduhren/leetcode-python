@@ -86,7 +86,39 @@ class Solution(object):
 
 
 
+#2021/7/23
+"""
+Time: O(LogN). Worse case: 0(N).
+Space: O(1)
 
+Standard binary search. Find the first and last by `rangeOf()` after we found it.
+"""
+class Solution(object):
+    def searchRange(self, A, T):
+        def rangeOf(i):
+            l = r = i
+            while 0<l and A[l]==A[l-1]: l -= 1
+            while r<N-1 and A[r]==A[r+1]: r += 1
+            return [l, r]
 
+        N = len(A)
+        l = 0
+        r = N-1
+        
+        while l<=r:
+            m = (l+r)/2
+            
+            if A[l]==T: return rangeOf(l)
+            if A[m]==T: return rangeOf(m)
+            if A[r]==T: return rangeOf(r)
+            
+            if T<A[l] or A[r]<T: return [-1, -1] #out of range
+            
+            if T<A[m]:
+                r = m-1
+            else:
+                l = m+1
+                
+        return [-1, -1]
 
 

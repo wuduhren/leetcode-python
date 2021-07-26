@@ -174,3 +174,76 @@ class Solution(object):
         
         if not nums: return -1
         return helper(0, len(nums)-1)
+
+
+
+#2021/7/24
+"""
+Time: O(LogN). Worse Case: O(N).
+Space: O(1)
+
+The key idea for most rotated array question is that
+If you cut a rotated array into half, at least one of them will be in-order.
+One half will be in-order.
+One half will be rotated or in-order.
+"""
+class Solution(object):
+    def search(self, A, T):
+        l = 0
+        r = len(A)-1
+        
+        while l<=r:
+            m = (l+r)/2
+            
+            if A[l]==T: return l
+            if A[m]==T: return m
+            if A[r]==T: return r
+            
+            if A[l]<=A[m] and A[m]<=A[r]:
+                #l~r is in-order, standard binary search.
+                if T<A[l] or A[r]<T: return -1
+                
+                if T<A[m]:
+                    r = m-1
+                else:
+                    l = m+1
+            elif A[l]<=A[m]:
+                #l~m is in-order
+                if A[l]<T and T<A[m]:
+                    #T is in l~m, so search in l~m
+                    r = m-1
+                else:
+                    #T is not in l~m, so search in m~r
+                    l = m+1
+            else:
+                #m~r is in-order
+                if A[m]<T and T<A[r]:
+                    #T is in m~r, so search m~r
+                    l = m+1
+                else:
+                    #T is not in m~r, so search in l~m
+                    r = m-1
+                
+        return -1
+
+
+"""
+Time: O(NLogN)
+Space: O(N)
+
+dp[i] := the smallest ending number of a sequence that has length i+1
+"""
+class Solution(object):
+    def lengthOfLIS(self, nums):
+        N = len(nums)
+        dp = []
+        
+        for n in nums:
+            i = bisect.bisect_left(dp, n)
+            
+            if i==len(dp):
+                dp.append(n)
+            else:
+                dp[i] = n
+        
+        return len(dp)

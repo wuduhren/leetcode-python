@@ -77,10 +77,9 @@ Time: O(LogN). Worse Case: O(N).
 Space: O(1)
 
 The key idea for most rotated array question is that
-If you cut the array into half,
-One of the half will be rotated and one half will be in-order.
-OR
-Both of them are in-order (if you are lucky)
+If you cut a rotated array into half,
+One half will be in-order.
+One half will be rotated or in-order.
 """
 class Solution(object):
     def search(self, A, T):
