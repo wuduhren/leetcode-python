@@ -47,3 +47,26 @@ class Solution(object):
             maxLength = max(maxLength, i-start+1)
             
         return maxLength
+
+
+"""
+Time: O(N).
+Space: O(N).
+
+Iterate throught s, while constantly update the "start" using "lastSeen".
+start~i does not have repeated character.
+Also, start should only be incremental [0]
+consider case `s = abba`, some at some point `lastSeen[c]` might be smaller than current start.
+"""
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        ans = 0
+        start = 0
+        lastSeen = {}
+        
+        for i, c in enumerate(s):
+            if c in lastSeen: start = max(start, lastSeen[c]+1) #[0]
+            lastSeen[c] = i
+            ans = max(ans, i-start+1)
+        
+        return ans

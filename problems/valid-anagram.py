@@ -40,3 +40,23 @@ class Solution(object):
                 if s.count(i) != t.count(i):
                     return False
         return True
+
+
+#2021//7/29
+"""
+Time: O(N)
+Space: O(N)
+"""
+import collections
+
+class Solution(object):
+    def isAnagram(self, s, t):
+        counter = collections.Counter()
+        if len(t)>len(s): t, s = s, t
+        
+        for c in s: counter[c] += 1
+        for c in t: counter[c] -= 1
+        for c in counter:
+            if counter[c]>0: return False
+        return True
+        

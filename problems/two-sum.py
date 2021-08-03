@@ -43,3 +43,18 @@ class Solution(object):
             else:
                 memo[target-n] = i
         return []
+
+#2021/7/31
+"""
+Time: O(N)
+Space: O(N)
+"""
+class Solution(object):
+    def twoSum(self, nums, target):
+        memo = {} #{key : value} := {"counter part needed for n" : "index of n"}
+        
+        for i, n in enumerate(nums):
+            if n in memo: return [memo[n], i]
+            memo[target-n] = i
+        
+        return []
