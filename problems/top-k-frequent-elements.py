@@ -59,4 +59,33 @@ class Solution(object):
         return opt
 
 
+"""
+Time: O(N+KLogN).
+Building numToCounts takes O(N).
+Building heap takes O(N) (Yeah, I know. Some People thinks `heapify` takes O(NLogN) but it actually takes O(N). But that is another story...).
+HeapPop takes O(LogN).
 
+Space: O(N)
+
+1. Form `[(-count1, num1), (-count2, num2)]`, in this case `h`.
+Use "-count" its because heapq in python is min heap, so using negative value will make it pop out the most freq count.
+
+2. Turn h into heap. (heapify)
+
+3. HeapPop h for k times.
+"""
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        ans = []
+        
+        numToCounts = collections.Counter(nums)
+        h = [(-numToCounts[num], num) for num in numToCounts]
+        
+        heapq.heapify(h)
+        
+        while k>0:
+            _, num = heapq.heappop(h)
+            ans.append(num)
+            k -= 1
+        
+        return ans
