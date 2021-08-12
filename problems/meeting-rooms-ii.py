@@ -54,7 +54,33 @@ class Solution(object):
 
 
 
+#2021/8/12
+"""
+Time: O(NLogN)
+Space: O(N)
 
+1. Sort the intervals by the start time. So we can check the starttime in order.
 
+2. Declare `h`. Imagine we store the room (endtime) we need in the `h`.
+If a meeting comes up, first we will check if any room avaliable.
+If so, take the room. (Remove the old endtime from `h` and add the current endtime)
+If not, start a new room. (Add the current endtime)
+Use heap so it will be convinient for us to get the earliest endtime at h[0] (most avaliable room).
 
-
+3. At last, `h` will contain the rooms (endtimes) needed for all the intervals.
+"""
+class Solution(object):
+    def minMeetingRooms(self, intervals):
+        intervals.sort()
+        h = [intervals[0][1]]
+        
+        for i in xrange(1, len(intervals)):
+            start = intervals[i][0]
+            end = intervals[i][1]
+            
+            if start>=h[0]:
+                #the room at h[0] is avaliable
+                heapq.heappop(h)
+            heapq.heappush(h, end)
+            
+        return len(h)
