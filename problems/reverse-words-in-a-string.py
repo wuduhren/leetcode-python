@@ -25,3 +25,14 @@ class Solution(object):
 
         opt = opt[:-1] #[2]
         return opt
+
+
+
+class Solution(object):
+    def reverseWords(self, s):
+        stack = s.split()
+        
+        ans = ''
+        while stack: ans += stack.pop()+' '
+        ans = ans[:len(ans)-1] #remove last space
+        return ans
