@@ -9,7 +9,7 @@ if you are a right node
 your min will be your parent's value
 your max will be your parent's max, because your parent might be someone's left child.
 
-root have no max and min
+node have no max and min
 
 2.
 for in-order traversal solution
@@ -27,19 +27,19 @@ but iterative is easier to track the last element'value
 """
 class Solution(object):
 	#recursive
-    def isValidBST(self, root):
+    def isValidBST(self, node):
         def helper(node, min_val, max_val):
             if not node: return True
             if node.val<=min_val or node.val>=max_val:return False
             if not helper(node.left, min_val, node.val): return False
             if not helper(node.right, node.val, max_val): return False
             return True
-        return helper(root, float('-inf'), float('inf'))
+        return helper(node, float('-inf'), float('inf'))
 
     #iterative
-    def isValidBST(self, root):
-        if root==None: return True
-        stack = [(root, float('-inf'), float('inf'))]
+    def isValidBST(self, node):
+        if node==None: return True
+        stack = [(node, float('-inf'), float('inf'))]
         while stack:
             node, min_val, max_val = stack.pop()
             if node.val<=min_val or node.val>=max_val:
@@ -51,18 +51,47 @@ class Solution(object):
         return True
    	        
     #in-order traversal
-    def isValidBST(self, root):
+    def isValidBST(self, node):
         stack = []
         last_val = float('-inf')
-        while root or stack:
-            while root:
-                stack.append(root)
-                root = root.left
-            root = stack.pop()
+        while node or stack:
+            while node:
+                stack.append(node)
+                node = node.left
+            node = stack.pop()
 
-            if root.val<=last_val:
+            if node.val<=last_val:
                 return False
             
-            last_val = root.val
-            root = root.right #if root.right: root = root.right
+            last_val = node.val
+            node = node.right #if node.right: node = node.right
+        return True
+
+
+
+#2021/9/14
+"""
+Time: O(N)
+Space: O(N)
+
+Use in-order traversal to check. If the bst is valid, the node.val should always be larger than the prev.
+"""
+class Solution(object):
+    def isValidBST(self, root):
+        node = root
+        stack = []
+        prev = float('-inf')
+        
+        while node or stack:
+            while node:
+                stack.append(node)
+                node = node.left
+            
+            node = stack.pop()
+            
+            if prev>=node.val: return False
+            prev = node.val
+            
+            node = node.right
+            
         return True
