@@ -20,3 +20,33 @@ Which needs to be a balanced BST, too. So we apply the same logic.
 Time: O(N). Because there will be N element being construct.
 Space: O(LogN). There will be LogN level of recursive call.
 """
+
+
+
+"""
+Time: O(N)
+Space: O(LogN)
+
+To make it height-balanced
+We need to make sure that the number of nodes in left substree and right subtree be the same.
+Since the `nums` is already sorted, the best nodes to be root is the one in the middle.
+
+`helper()` will get the root node from the nums[i:j].
+If it has left child, it will recursively call `helper()` to get the child.
+
+Use pointers i and j as param to avoid keep copying `nums`.
+"""
+class Solution(object):
+    def sortedArrayToBST(self, nums):
+        def helper(i, j):
+            m = (i+j)/2
+            node = TreeNode(nums[m])
+            
+            leftLength = m-i #number of nodes in the left subtree
+            rightLength = j-(m+1) #number of nodes in the right subtree
+            
+            if leftLength>0: node.left = helper(i, m)
+            if rightLength>0: node.right = helper(m+1, j)
+            return node
+        
+        return helper(0, len(nums))
