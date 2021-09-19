@@ -6,8 +6,8 @@ As time grows, this also become a guide to prepare for software engineer intervi
 For example, `merge-sorted-array.py`'s solution is at `https://leetcode.com/problems/merge-sorted-array/`.
 
 2. I really take time tried to make the best solution and collect the best resource that I found.  
-Because I wanted to help others like me. 
-You can [BUY ME A COFFEE](https://www.buymeacoffee.com/chriswu) if you want to show support.
+Because I wanted to help others like me.  
+Please [BUY ME A COFFEE](https://www.buymeacoffee.com/chriswu) if you want to show support.
 
 
 # Leetcode Problem Lists
