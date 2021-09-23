@@ -25,3 +25,24 @@ class Solution(object):
         
         if not root: return True
         return helper(root, 0)!=-1
+
+
+"""
+Time: O(N), since we recursively traverse each node once.
+Space: O(LogN), for the recursive call. O(N) if the tree is not balanced.
+"""
+class Solution(object):
+    def isBalanced(self, root):
+        
+        #return (if the node isBalanced, the height of the node)
+        def helper(node):
+            if not node: return True, -1
+            
+            isLeftBalanced, leftHeight = helper(node.left)
+            isRightBalanced, rightHeight = helper(node.right)
+            
+            height = max(leftHeight, rightHeight)+1
+            
+            return isLeftBalanced and isRightBalanced and abs(leftHeight-rightHeight)<=1, height
+        
+        return helper(root)[0]
