@@ -1,10 +1,3 @@
-# Definition for a binary tree node.
-# class TreeNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class BSTIterator(object):
 
     def __init__(self, root):
@@ -27,10 +20,45 @@ class BSTIterator(object):
 
     def hasNext(self):
         return len(self.stack)!=0
+
+"""
+Time: init() O(1). next() O(LogN). hasNext() O(1).
+Space: O(N)
+"""   
+class BSTIterator(object):
+
+    def __init__(self, root):
+        self.node = root
+        self.stack = []
+            
+    def next(self):
+        while self.node:
+            self.stack.append(self.node)
+            self.node = self.node.left
+            
+        node = self.stack.pop()
+        self.node = node.right
+        return node.val
         
+    def hasNext(self):
+        return self.stack or self.node
 
 
-# Your BSTIterator object will be instantiated and called as such:
-# obj = BSTIterator(root)
-# param_1 = obj.next()
-# param_2 = obj.hasNext()
+"""
+FYI. Template for in-order traverse.
+"""
+def inOrderTraverse(root):
+    stack = []
+    node = root
+    
+    while node or stack:
+        while node:
+            stack.append(node)
+            node = node.left
+        
+        node = stack.pop()
+        
+        #do something
+        print node.val
+        
+        node = node.right

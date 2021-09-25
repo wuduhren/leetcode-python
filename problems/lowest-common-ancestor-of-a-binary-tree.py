@@ -130,3 +130,24 @@ find_ancestors() is O(LogN).
 find_lowest_common is O(LogN).
 Space complexity is O(N), since `genealogy` may carry all the nodes.
 """
+
+
+# 2021/9/25
+class Solution(object):
+    def lowestCommonAncestor(self, root, p, q):
+        def __init__(self):
+            self.ans = None
+            
+        def helper(node):
+            
+            if not node: return False
+            mid = node==q or node==p
+            left = helper(node.left)
+            right = helper(node.right)
+            
+            if (mid and left) or (mid and right) or (left and right): self.ans = node
+            
+            return mid or left or right
+        
+        helper(root)
+        return self.ans
