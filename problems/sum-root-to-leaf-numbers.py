@@ -43,6 +43,30 @@ tack will at most carry one path (root to leaf), each node containing one digit.
 """
 
 
+"""
+Time: O(N)
+Space: O(H)
+
+Use standard DFS to traverse the tree.
+"""
+class Solution(object):
+    def sumNumbers(self, root):
+        ans = 0
+        stack = [(root, '')]
+        
+        while stack:
+            node, numString = stack.pop()
+            
+            if node.left:
+                stack.append((node.left, numString+str(node.val)))
+            if node.right:
+                stack.append((node.right, numString+str(node.val)))
+            
+            if not node.left and not node.right:
+                ans += int(numString+str(node.val))
+        return ans
+
+
 
 
 
