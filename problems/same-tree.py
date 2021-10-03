@@ -21,3 +21,29 @@ class Solution(object):
                 return False
         return True
 
+
+"""
+Time: O(N)
+Space: O(N)
+
+Use BFS to traverse the tree and represent the result as a string.
+Note that null node still need to be shown in the string.
+Because there are the same val in the tree, and different tree may result in the same string.
+"""
+class Solution(object):
+    def isSameTree(self, p, q):
+        def getStr(node):
+            s = ''
+            q = collections.deque([node])
+            
+            while q:
+                node = q.popleft()
+                if not node:
+                    s += '#'
+                else:
+                    s += str(node.val)
+                    q.append(node.left)
+                    q.append(node.right)
+            return s
+        
+        return getStr(p)==getStr(q)
