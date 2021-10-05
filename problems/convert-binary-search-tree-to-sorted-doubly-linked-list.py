@@ -44,3 +44,61 @@ class Solution(object):
         right_most.right = root
         
         return root
+
+
+
+
+
+"""
+Time: O(N)
+Space: O(LogN) if the tree is balanced.
+
+Do an inorder traversal and link the node.left to the prev and prev.right to node.
+"""
+class Solution(object):
+    def treeToDoublyList(self, root):
+        if not root: return root
+        
+        stack = []
+        node = root
+        preHead = Node(-1)
+        prev = preHead
+        
+        while node or stack:
+            while node:
+                stack.append(node)
+                node = node.left
+            
+            node = stack.pop()
+            
+            prev.right = node
+            node.left = prev
+            
+            prev = node
+            
+            node = node.right
+        
+        head = preHead.right
+        head.left = prev
+        prev.right = head
+        
+        return head
+
+"""
+FYI
+"""
+def inOrderTraverse(root):
+    stack = []
+    node = root
+    
+    while node or stack:
+        while node:
+            stack.append(node)
+            node = node.left
+        
+        node = stack.pop()
+        
+        #do something
+        print node.val
+        
+        node = node.right
