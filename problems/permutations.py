@@ -27,3 +27,24 @@ class Solution(object):
         opt = []
         dfs([], nums)
         return opt
+
+
+
+
+"""
+Time complexity: O(N!). Since in this example our choices is N at the beginning, then N-1, then N-2, then N-3... then 1.
+Space complexity: O(N!). The recursion takes N level of recursion.
+
+For each `dfs()` we put the `n` in `remains` to the `path`, if there is no `remains`, add the `path` to the `ans`.
+"""
+class Solution(object):
+    def permute(self, nums):
+        def dfs(remains, path):
+            if not remains: ans.append(path)
+            
+            for i, n in enumerate(remains):
+                dfs(remains[:i]+remains[i+1:], path+[n])
+        
+        ans = []
+        dfs(nums, [])
+        return ans
