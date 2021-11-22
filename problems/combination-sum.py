@@ -118,3 +118,26 @@ class Solution(object):
         candidates.sort()
         dfs(0, T, [])
         return opt
+
+
+"""
+Time: O(N^(T/M)), N is the number of candidates. T is target. M is min(candidates).
+Space: O(T/M)
+"""
+class Solution(object):
+    def combinationSum(self, candidates, target):
+        def helper(remain, comb, start=0):
+            if remain==0:
+                ans.append(comb[:])
+            elif remain<0:
+                return
+            elif remain>0:
+                for i in xrange(start, len(candidates)):
+                    candidate = candidates[i]
+                    comb.append(candidate)
+                    helper(remain-candidate, comb, i)
+                    comb.pop()
+        
+        ans = []
+        helper(target, [])
+        return ans

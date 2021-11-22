@@ -34,3 +34,20 @@ class Solution(object):
         ans = []
         helper(N, N, '')
         return ans
+
+"""
+Time: O(2^N)
+Space: O(N)
+"""
+class Solution(object):
+    def generateParenthesis(self, n):
+        def helper(curr, openCount, left, right):
+            if left==0 and right==0: ans.append(curr)
+            if left>0:
+                helper(curr+'(', openCount+1, left-1, right)
+            if right>0 and openCount>0:
+                helper(curr+')', openCount-1, left, right-1)
+        
+        ans = []
+        helper('', 0, n, n)
+        return ans

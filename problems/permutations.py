@@ -48,3 +48,29 @@ class Solution(object):
         ans = []
         dfs(nums, [])
         return ans
+
+
+"""
+Time: O(N!)
+Space: O(N!)
+
+helper(0) will set index 0 to all number.
+helper(1) will set index 1 to all number remains.
+helper(2) will set index 2 to all number remains.
+helper(3) will set index 3 to all number remains.
+...
+"""
+class Solution(object):
+    def permute(self, nums):
+        def helper(i):
+            if i>=N: ans.append(nums[:])
+            
+            for j in xrange(i, N):
+                nums[i], nums[j] = nums[j], nums[i]
+                helper(i+1)
+                nums[i], nums[j] = nums[j], nums[i]
+        
+        N = len(nums)
+        ans = []
+        helper(0)
+        return ans

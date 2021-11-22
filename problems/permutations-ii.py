@@ -24,3 +24,32 @@ class Solution(object):
         nums.sort()
         dfs([], nums)
         return opt
+
+
+"""
+Time: O(N!)
+Space: O(N!)
+
+Since we are iterating the key of the counter, we will only place "each kind of number" at the first place once.
+For example, [1,1,2], it will not happend that
+We place the first "1" at index 0, and keep exploring...
+And place the second "1" at index 0, and keep exploring...
+"""
+class Solution(object):
+    def permuteUnique(self, nums):
+        def helper(path):
+            if len(path)==len(nums): ans.append(path[:])
+            
+            for num in counter:
+                if counter[num]>0:
+                    path.append(num)
+                    counter[num] -= 1
+                    
+                    helper(path)
+                    
+                    path.pop()
+                    counter[num] += 1
+        ans = []
+        counter = collections.Counter(nums)
+        helper([])
+        return ans

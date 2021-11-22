@@ -38,3 +38,40 @@ class Solution(object):
         dfs([], 1)
         return opt
 
+
+
+"""
+Use a helper to check the remain.
+comb is the combination to sum up to remain.
+k is the max length of comb.
+start is the starting index of "nums", since we already explore the all the possible comb from previous index.
+
+Time: O(9!/(9-k)! * k), 9*8*7... for k times. And each ans takes O(k) to copy the comb list.
+Space: O(k)
+"""
+class Solution(object):
+    def combinationSum3(self, k, n):
+        def helper(remain, comb, k, start):
+            if remain==0 and len(comb)==k:
+                ans.append(comb[:])
+            elif remain<0 or len(comb)>k:
+                return
+            else:
+                for i in xrange(start, len(nums)):
+                    used = nums[i]
+                    num = i+1
+                    
+                    if used: continue
+                        
+                    comb.append(num)
+                    nums[i] = True
+                    
+                    helper(remain-num, comb, k, i+1)
+                    
+                    comb.pop()
+                    nums[i] = False
+        
+        nums = [False]*9
+        ans = []
+        helper(n, [], k, 0)
+        return ans
