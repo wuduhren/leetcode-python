@@ -78,3 +78,52 @@ class Solution(object):
         
         return -1
 
+
+
+
+
+
+
+class Solution(object):
+    def networkDelayTime(self, times, n, k):
+        G = collections.defaultdict(list) #adjacency list
+        D = [float('inf')]*(n+1) #D[n] store the distance between n and k
+        D[k] = 0
+        h = [(0, k)]
+        visited = set()
+        
+        #form the djacency list
+        for u, v, w in times:
+            G[u].append((v, w))
+        
+        #dijkstra
+        while h:
+            d1, node = heapq.heappop(h)
+            if node in visited: continue
+            visited.add(node)
+            
+            for nei, d2 in G[node]:
+                if d1+d2<D[nei]:
+                    D[nei] = d1+d2
+                    heapq.heappush(h, (D[nei], nei))
+        
+        #iterate through the distance between n and k, find ans
+        ans = float('-inf')
+        for i, d in enumerate(D):
+            if i==0: continue
+            if d==float('inf'): return -1
+            ans = max(ans, d)
+        return ans
+            
+            
+        
+
+
+
+
+
+
+
+
+
+
