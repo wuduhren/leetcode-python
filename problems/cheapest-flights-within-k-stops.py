@@ -66,3 +66,36 @@ class Solution2(object):
 
 		return min_price if min_price!=float('inf') else -1
 
+
+"""
+Standard Dijkstra, except this time instead of only explore the ones with least price
+We also need to explore the ones with less steps. So add stepFromSrc to check.
+
+Time: O(ELogE), since there will be at most E edges that get pushed into the heap.
+Space: O(E)
+"""
+class Solution(object):
+    def findCheapestPrice(self, n, flights, src, dst, K):
+        priceFromSrc = {}
+        stepFromSrc = {}
+        h = [(0, 0, src)]
+        G = collections.defaultdict(list)
+        
+        #build graph
+        for s, d, p in flights:
+            G[s].append((d, p))
+        
+        #dijkstra
+        while h:
+            price, k, node = heapq.heappop(h)
+            
+            if node==dst: return price
+            if k>K: continue
+            
+            for nei, price2 in G[node]:
+                if nei not in priceFromSrc or price+price2<=priceFromSrc[nei] or k<stepFromSrc[nei]:
+                    priceFromSrc[nei] = price+price2
+                    stepFromSrc[nei] = k
+                    heapq.heappush(h, (price+price2, k+1, nei))
+                    
+        return -1
