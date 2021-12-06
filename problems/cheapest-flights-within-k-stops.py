@@ -93,6 +93,7 @@ class Solution(object):
             if k>K: continue
             
             for nei, price2 in G[node]:
+				#explore next destination with less price or less steps
                 if nei not in priceFromSrc or price+price2<=priceFromSrc[nei] or k<stepFromSrc[nei]:
                     priceFromSrc[nei] = price+price2
                     stepFromSrc[nei] = k
