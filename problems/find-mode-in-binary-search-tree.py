@@ -1,3 +1,8 @@
+"""
+Time: O(N). For we traverse every node recursively.
+Space: O(N). Becuase we store all element's val and count in `counter`.
+Note that, we do not use the feature of BST.
+"""
 from collections import Counter
 class Solution(object):
     def findMode(self, root):
@@ -14,11 +19,21 @@ class Solution(object):
         return [val for val, count in counter.items() if count==max_count]
 
 """
-Time: O(N). For we traverse every node recursively.
-Space: O(N). Becuase we store all element's val and count in `counter`.
-Note that, we do not use the feature of BST.
-"""
+To use the feature of BST, we are going to inorder traverse the BST.
+So it will be like we are iterating a sorted array.
 
+[1]
+While iterating, we can put only the element count that is greater or equal than `max_count` to `ans`.
+If we encounter a new element with larger `curr_count`, we reset the `ans`.
+
+[0]
+With the help of `prev_val` we can know that `curr_node` is the same to the previous or not.
+If not, its a new element, we need to reset the `curr_count`.
+
+Time: O(N). Space: O(LogN)
+
+For better understanding, below is a template for inorder traverse.
+"""
 class Solution(object):
     def findMode(self, root):
         if not root: return []
@@ -54,23 +69,6 @@ class Solution(object):
                 
         return ans
 
-"""
-To use the feature of BST, we are going to inorder traverse the BST.
-So it will be like we are iterating a sorted array.
-
-[1]
-While iterating, we can put only the element count that is greater or equal than `max_count` to `ans`.
-If we encounter a new element with larger `curr_count`, we reset the `ans`.
-
-[0]
-With the help of `prev_val` we can know that `curr_node` is the same to the previous or not.
-If not, its a new element, we need to reset the `curr_count`.
-
-Time: O(N). Space: O(LogN)
-
-For better understanding, below is a template for inorder traverse.
-"""
-
 #inorder traversal of BST
 def inorder_traverse(root):
     curr = root
@@ -85,3 +83,28 @@ def inorder_traverse(root):
         print curr.val
         
         curr = curr.right
+
+
+
+
+"""
+Time: O(N)
+Space: O(N)
+"""
+class Solution(object):
+    def findMode(self, root):
+        def helper(node):
+            if not node: return
+            counter[node.val] += 1
+            counter['maxCount'] = max(counter['maxCount'], counter[node.val])
+            helper(node.left)
+            helper(node.right)
+        
+        ans = []
+        counter = collections.Counter()
+        helper(root)
+        for v in counter:
+            if v!='maxCount' and counter[v]==counter['maxCount']:
+                ans.append(v)
+        
+        return ans
