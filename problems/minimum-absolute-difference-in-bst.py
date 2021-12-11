@@ -44,3 +44,46 @@ class Solution(object):
 Time complexity: O(N)
 Space complexity: O(N)
 """
+
+
+"""
+Inorder traverse the BST and update the diff.
+Time complexity: O(N)
+Space complexity: O(N)
+"""
+class Solution(object):
+    def getMinimumDifference(self, root):
+        ans = float('inf')
+        
+        stack = []
+        curr = root
+        prevVal = float('-inf')
+        
+        while stack or curr:
+            while curr:
+                stack.append(curr)
+                curr = curr.left
+                
+            curr = stack.pop()
+            ans = min(ans, curr.val-prevVal)
+            prevVal = curr.val
+            
+            curr = curr.right
+        return ans
+
+
+def inorderTraversal(self, root):
+    stack = []
+    curr = root
+    
+    while stack or curr:
+        while curr:
+            stack.append(curr)
+            curr = curr.left
+            
+        curr = stack.pop()
+        
+        # do something
+        print curr.val
+        
+        curr = curr.right
