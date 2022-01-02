@@ -48,3 +48,49 @@ board = [
 words = ["oath","pea","eat","rain"]
 
 print Solution().findWords(board, words)
+
+
+
+
+class Solution(object):
+    def findWords(self, board, words):
+        def dfs(i, j, parent):
+            c = board[i][j]
+            node = parent[c]
+            
+            if '.' in node: ans.append(node.pop('.'))
+            
+            board[i][j] = '#'
+            
+            for (rowOffset, colOffset) in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
+                newRow, newCol = i + rowOffset, j + colOffset     
+                if newRow<0 or newRow>=len(board) or newCol<0 or newCol>=len(board[0]): continue
+                if not board[newRow][newCol] in node: continue
+                dfs(newRow, newCol, node)
+            
+            board[i][j] = c
+            if not node: parent.pop(c)
+                
+        trie = {}
+        ans = []
+        
+        #build trie
+        for word in words:
+            node = trie
+            for c in word:
+                if c not in node:
+                    node[c] = {}
+                node = node[c]
+            node['.'] = word
+        print trie
+        
+        for i in xrange(len(board)):
+            for j in xrange(len(board[0])):
+                if board[i][j] in trie: dfs(i, j, trie)
+        
+        
+        return ans
+                    
+            
+                
+        
