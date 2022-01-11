@@ -23,7 +23,7 @@ class Solution(object):
                 dp[i][1] = arr[i]
             else:
                 dp[i][0] = max(dp[i-1][0]+arr[i], arr[i])
-                dp[i][1] = max(dp[i-1][0], dp[i-1][1]+arr[i], arr[i])
+                dp[i][1] = max(dp[i-1][0], dp[i-1][1]+arr[i])
             subarrayMaxSum = max(subarrayMaxSum, dp[i][0], dp[i][1])
         
         return subarrayMaxSum
