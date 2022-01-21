@@ -21,7 +21,7 @@ class Solution(object):
             keyCount[node.key] += 1
         
         def addPath(node, path):
-            if node.children and keyCount[node.key]>1: return
+            if node.children and keyCount[node.key]>1: return #leaf node does not apply to this rule
             ans.append(path+[node.val])
             for c in node.children:
                 addPath(node.children[c], path+[node.val])
@@ -38,6 +38,11 @@ class Solution(object):
                 if c not in node.children: node.children[c] = Node(c)
                 node = node.children[c]
         
+        #set all nodes key recursively
         setKey(root)
-        for c in root.children: addPath(root.children[c], [])
+
+        #build ans
+        for c in root.children:
+            addPath(root.children[c], [])
+        
         return ans
