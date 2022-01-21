@@ -66,3 +66,42 @@ class Solution(object):
         return ans
 
 
+class Solution(object):
+    def longestStrChain(self, words):
+        def getLongestStringChain(word):
+            if word in history: return history[word]
+            if not orderedWords[len(word)+1]: return 1
+            
+            temp = 0
+            for word2 in orderedWords[len(word)+1]:
+                if isPredecessor(word2, word):
+                    temp = max(temp, getLongestStringChain(word2))
+            
+            history[word] = temp+1
+            return temp+1
+        
+        def isPredecessor(w2, w1):
+            if len(w2)!=len(w1)+1: return False
+            
+            j = 0
+            for c in w1:
+                found = False
+                while j<len(w2):
+                    if c==w2[j]:
+                        found = True
+                        j += 1
+                        break
+                    else:
+                        j += 1
+                if not found: return False
+
+            return True
+        
+        orderedWords = collections.defaultdict(list)
+        for word in words: orderedWords[len(word)].append(word)
+        history = {}
+        ans = 0
+        
+        for word in words:
+            ans = max(ans, getLongestStringChain(word))
+        return ans
