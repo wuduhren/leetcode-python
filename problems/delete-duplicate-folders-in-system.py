@@ -1,12 +1,10 @@
-from sortedcontainers import SortedDict
-
 class Node(object):
     def __init__(self, val):
         self.val = val
         self.key = None
-        self.children = SortedDict()
-        
-        
+        self.children = {}
+
+
 class Solution(object):
     def deleteDuplicateFolder(self, paths):
         def setKey(node):
@@ -14,7 +12,7 @@ class Solution(object):
                 node.key = node.val
             else:
                 node.key = ''
-                for c in node.children:
+                for c in sorted(node.children.keys()):
                     setKey(node.children[c])
                     node.key += node.children[c].val + '|' + node.children[c].key + '|'
                 
