@@ -4,17 +4,13 @@ class Node(object):
         self.key = None
         self.children = {}
 
-
 class Solution(object):
     def deleteDuplicateFolder(self, paths):
         def setKey(node):
-            if not node.children:
-                node.key = node.val
-            else:
-                node.key = ''
-                for c in sorted(node.children.keys()):
-                    setKey(node.children[c])
-                    node.key += node.children[c].val + '|' + node.children[c].key + '|'
+            node.key = ''
+            for c in sorted(node.children.keys()): #need to be sorted. so when child structs are the same, we won't generate different key from different iteration order.
+                setKey(node.children[c])
+                node.key += node.children[c].val + '|' + node.children[c].key + '|' #generate a key for each node. only considering its children structure. (see the "identical" definition, it does not consider the val of the node itself.)
                 
             keyCount[node.key] += 1
         
