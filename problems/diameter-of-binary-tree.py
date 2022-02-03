@@ -83,3 +83,23 @@ Space complexity is O(LogN), since we might got to LogN level on recursion.
             
 #         return ans
 
+
+"""
+For each route in the binary tree, we can view it from the highest node in the route.
+So the length will be helper(node.left) + 1 + helper(node.right).
+"""
+class Solution(object):
+    def __init__(self):
+        self.ans = 0 #number of nodes in the longest route
+        
+    def diameterOfBinaryTree(self, root):
+	    #return the longest length to the leaf including itself
+        #also update self.ans
+        def helper(node):
+            r = helper(node.right) if node.right else 0
+            l = helper(node.left) if node.left else 0
+            self.ans = max(self.ans, l+1+r)
+            return max(l+1, r+1)
+        
+        helper(root)
+        return self.ans-1

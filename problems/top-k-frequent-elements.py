@@ -89,3 +89,22 @@ class Solution(object):
             k -= 1
         
         return ans
+
+"""
+Bucket sort for counts.
+Space/Time: O(N)
+"""
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        counter = collections.Counter(nums)
+        count2Nums = [[] for _ in xrange(len(nums)+1)] #count2Nums[i] := elements with count i
+        
+        for num in counter:
+            count2Nums[counter[num]].append(num)
+        
+        ans = []
+        for i in xrange(len(count2Nums)-1, -1, -1):
+            ans += count2Nums[i]
+            if len(ans)>=k: break
+        
+        return ans
