@@ -118,12 +118,96 @@ class Solution(object):
             
         
 
+"""
+Dijkstra BFS+Priority Queue Implementation
+Time: O(ELogE), E is the edges count in the graph.
+"""
+class Solution(object):
+    def networkDelayTime(self, times, N, K):
+        ans = -1 #max time from K to any
+        visited = set()
+        pq = [(0, K)] #[(node's distance to K, node)]
+        
+        #construct adjacency list
+        adj = collections.defaultdict(list)
+        for u, v, w in times:
+            adj[u].append((w, v))
+            
+        while pq:
+            dis, node = heapq.heappop(pq)
+            if node in visited: continue
+            visited.add(node)
+            
+            ans = max(ans, dis)
+            
+            for d2, nei in adj[node]:
+                heapq.heappush(pq, (d2+dis, nei))
+        
+        return ans if len(visited)==N else -1
 
 
 
+"""
+Dijkstra Normal Implementation
+Time: O(N^2), N is the nodes count in the graph.
+"""
+class Solution(object):
+    def networkDelayTime(self, times, N, K):
+        #construct dis. dis[n] := node n distance to K
+        dis = {}
+        for n in xrange(1, N+1):
+            dis[n] = float('inf')
+        dis[K] = 0
+        
+        visited = set()
+        
+        #construct adjacency list
+        adj = collections.defaultdict(list)
+        for u, v, w in times:
+            adj[u].append((w, v))
+        
+
+        while len(visited)<N:
+            #find the nearest node to K, lets call it minDisNode
+            minDisNode = None
+            minDis = float('inf')
+            
+            for n in xrange(1, N+1):
+                if n not in visited and dis[n]<minDis:
+                    minDisNode = n
+                    minDis = dis[n]
+            
+            #update minDisNode neighbor's distance to K    
+            if minDis==float('inf'): break
+            for d2, nei in adj[minDisNode]:
+                dis[nei] = min(dis[nei], d2+minDis)
+            
+            #store the node we alreay determined the distance to K in visited
+            visited.add(minDisNode)
+        
+        return max(dis.values()) if len(visited)==N else -1
 
 
-
-
-
-
+"""
+Floyd
+Time: O(N^3), N is the nodes count in the graph.
+Note that Floyed can calculate the shortest distance between any two nodes.
+Also, it can handle negative values on the edge.
+"""
+class Solution(object):
+    def networkDelayTime(self, times, N, K):
+        #dp[i-1][j-1] := distance from i to j
+        dp = [[float('inf') for i in xrange(1, N+1)] for j in xrange(1, N+1)]
+        
+        for i in xrange(1, N+1):
+            dp[i-1][i-1] = 0
+        for u, v, w in times:
+            dp[u-1][v-1] = w
+        
+        for k in xrange(1, N+1):
+            for i in xrange(1, N+1):
+                for j in xrange(1, N+1):
+                    dp[i-1][j-1] = min(dp[i-1][j-1], dp[i-1][k-1]+dp[k-1][j-1])
+        
+        ans = max(dp[K-1])
+        return ans if ans!=float('inf') else -1

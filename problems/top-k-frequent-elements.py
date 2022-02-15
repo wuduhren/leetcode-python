@@ -108,3 +108,42 @@ class Solution(object):
             if len(ans)>=k: break
         
         return ans
+
+
+# Quick Select
+class Solution(object):
+    def topKFrequent(self, nums, K):
+        def quickselect(A, s, e, K):
+            i = s
+            t = s
+            j = e
+            
+            pivot = A[(s+e)/2][0]
+            while t<=j:
+                if A[t][0]<pivot:
+                    A[t], A[i] = A[i], A[t]
+                    i += 1
+                    t += 1
+                elif A[t][0]==pivot:
+                    t += 1
+                else:
+                    A[t], A[j] = A[j], A[t]
+                    j -=1
+            
+            if e-j>=K:
+                return quickselect(A, j+1, e, K)
+            elif e-(i-1)>=K:
+                return pivot
+            else:
+                return quickselect(A, s, i-1, K-(e-i+1))
+                
+        ans = []
+        counter = collections.Counter(nums)
+        freqs = [(counter[num], num) for num in counter]
+        
+        KthLargestFreq = quickselect(freqs, 0, len(freqs)-1, K)
+        
+        for freq, num in freqs:
+            if freq>=KthLargestFreq: ans.append(num)
+                
+        return ans
