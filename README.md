@@ -82,7 +82,7 @@ If you are new or know nothing about data structures and algorithms, I recommend
 
     * Heap memory
         * Larger.
-        * Slightly slower. Because we has to use "pointers" to access.
+        * Slightly slower. Because we have to use "pointers" to access.
         * We are responsible to free() the memory.
         * Heap variable is global variable in nature.
 9. GET vs POST
