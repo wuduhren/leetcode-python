@@ -53,3 +53,28 @@ class Solution(object):
         counter = collections.Counter(nums)
         helper([])
         return ans
+
+
+"""
+差板法
+"""
+class Solution(object):
+    def permuteUnique(self, nums):
+        if not nums: return []
+        
+        permutations = collections.deque([[nums[0]]])
+        
+        for i in xrange(1, len(nums)):
+            num = nums[i]
+            l = len(permutations)    
+            
+            while l:
+                permutation = permutations.popleft()
+                for j in xrange(len(permutation)+1):
+                    if 0<j and num==permutation[j-1]: break
+                    newPermutaion = permutation[:]
+                    newPermutaion.insert(j, num)
+                    permutations.append(newPermutaion)
+                l -= 1
+        
+        return permutations

@@ -56,3 +56,22 @@ class Solution(object):
                 dp[i][t] = (dp[i-1][t-nums[i-1]] if t-nums[i-1]>=minTarget else 0) + (dp[i-1][t+nums[i-1]] if t+nums[i-1]<=maxTarget else 0)
         
         return dp[N][target]
+
+
+"""
+dp[i][s] := considerting nums[:i] how many expressions can sum up to s.
+dp[0][0] = 1
+"""
+class Solution(object):
+    def findTargetSumWays(self, nums, target):
+        S = sum(nums)
+        if not -S<=target<=S: return 0
+        
+        dp = [{s:0 for s in xrange(-S, S+1)} for _ in xrange(len(nums)+1)]
+        dp[0][0] = 1
+        
+        for i in xrange(1, len(nums)+1):
+            for s in xrange(-S, S+1):
+                dp[i][s] = (dp[i-1][s+nums[i-1]] if s+nums[i-1]<=S else 0) + (dp[i-1][s-nums[i-1]] if s-nums[i-1]>=-S else 0)
+        
+        return dp[-1][target]
