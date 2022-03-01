@@ -40,7 +40,3 @@ class Solution(object):
                 
         return -1
     
-    
-    
-    
-    

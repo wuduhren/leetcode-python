@@ -17,7 +17,6 @@ class Solution(object):
             dp[i] += dp[i-1]%M #ends at P
             dp[i] += (dp[i-1]%M - dp[i-4]%M) #ends at L. All posiblity but the end cannot be PLL
         
-        
         ans += dp[n]
         
         for i in xrange(n):

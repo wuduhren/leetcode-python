@@ -26,3 +26,42 @@ class Solution(object):
             opt.append([v for y, v in sorted(temp[i])]) #the temp[i] will be sorted by y_position then sorted by node.val
         
         return opt
+
+
+"""
+Time: O(Nk) in average case.
+dfs takes O(N).
+Double for-loop take nearly O(N), in the double for-loop we need to spend some time on sorting.
+But the number of elements in the same column and row is very very small. Lets say, O(k)
+
+Space: O(N)
+"""
+class Solution(object):
+    def verticalTraversal(self, root):
+        def dfs(node, x, y):
+            if not node: return
+            self.maxX = max(self.maxX, x)
+            self.minX = min(self.minX, x)
+            self.minY = min(self.minY, y)
+            data[(x, y)].append(node.val)
+            dfs(node.left, x-1, y-1)
+            dfs(node.right, x+1, y-1)
+        
+        data = collections.defaultdict(list)
+        self.maxX = float('-inf')
+        self.minX = float('inf')
+        self.minY = float('inf')
+        
+        dfs(root, 0, 0)
+        
+        ans = []
+        for x in xrange(self.minX, self.maxX+1):
+            temp = []
+            for y in xrange(0, self.minY-1, -1):
+                if (x, y) not in data: continue
+                if len(data[(x, y)])>1:
+                    temp += sorted(data[(x, y)])
+                else:
+                    temp.append(data[(x, y)][0])
+            ans.append(temp)
+        return ans
