@@ -37,7 +37,7 @@ I found it makes sense to solve similar problems together, so that we can recogn
 3. [What should I know from the CLRS 3rd edition book if my aim is to get into Google?](https://www.quora.com/What-should-I-know-from-the-CLRS-3rd-edition-book-if-my-aim-is-to-get-into-Google/answer/Jimmy-Saade)
 
 ## Data Structures and Algorithms for beginners
-If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://classroom.udacity.com/courses/ud513>). This course is taught in Python and design to help you find job and do well in the interview.
+If you are new or know nothing about data structures and algorithms, I recommend [this course](<https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513>). This course is taught in Python and design to help you find job and do well in the interview.
 
 
 # System Design

@@ -1,3 +1,10 @@
+"""
+For each "island" asign them a group id. Also calculate the group's size.
+Iterate all the zeros, update the ans.
+
+Time:O(MN)
+Space: O(MN) in the worst case.
+"""
 class Solution(object):
     def largestIsland(self, grid):
         def isValid(i, j, M, N):
