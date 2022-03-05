@@ -39,7 +39,6 @@ ans += 3
 """
 class Solution(object):
     def subarraySum(self, nums, k):
-        N = len(nums)
         ans = 0
         
         prefixSumCount = collections.Counter()

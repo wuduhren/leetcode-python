@@ -54,5 +54,24 @@ class Solution(object):
         return l
                 
                 
-            
+
+"""
+[l, r] is the possible range.
+Keep decreasing the range unsing binary search until l==r.
+Pay attention to
+m = l+(r-l+1)/2
+Sometimes you need m = l+(r-l)/2 to avoid infinite loop.
+"""
+class Solution(object):
+    def findPeakElement(self, nums):
+        l = 0
+        r = len(nums)-1
+        
+        while l<r:
+            m = l+(r-l+1)/2
+            if nums[m-1]<nums[m]:
+                l = m
+            else:
+                r = m-1
+        return l
         

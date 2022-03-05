@@ -23,16 +23,19 @@ class Solution1(object):
 	def findCheapestPrice(self, n, flights, src, dst, K):
 		graph = collections.defaultdict(list)
 		pq = []
+		visited = set()
 
 		for u, v, w in flights: graph[u].append((w, v))
 
 		heapq.heappush(pq, (0, K+1, src))
 		while pq:
 			price, stops, city = heapq.heappop(pq)
+			visited.add(city)
 
 			if city is dst: return price
 			if stops>0:
 				for price_to_nei, nei in graph[city]:
+					if nei in visited: continue
 					heapq.heappush(pq, (price+price_to_nei, stops-1, nei))
 		return -1
 
