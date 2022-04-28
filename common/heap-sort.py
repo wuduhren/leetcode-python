@@ -1,35 +1,33 @@
+#O(LogN), used when part of the array is already heapified.
+def heapify(A, N, i):
+	largest = i
+	l = i*2+1
+	r = i*2+2
+
+	if l<N and A[l]>A[largest]: largest = l
+	if r<N and A[r]>A[largest]: largest = r
+	if largest!=i:
+		A[largest], A[i] = A[i], A[largest]
+		heapify(A, N, largest)
+
+#O(NLogN)
 def heapSort(A):
-	#build max heap
-	def heapify(A, n, i):
-		if i>=n: return
-		l, r = i*2+1, i*2+2
-		left = A[l] if l<n else float('-inf')
-		right = A[r] if r<n else float('-inf')
+	N = len(A)
 
-		if left>A[i] or right>A[i]:
-			if left>right:
-				A[i], A[l] = A[l], A[i]
-				heapify(A, n, l)
-			else:
-				A[i], A[r] = A[r], A[i]
-				heapify(A, n, r)
-
-	n = len(A)
-
-	for i in reversed(xrange(n)):
-		heapify(A, n, i)
-
-	for i in reversed(xrange(1, n)):
-		A[i], A[0] = A[0], A[i]
+	#build max heap, O(NLogN). Can be optimized to the O(N).
+	for i in range(N//2-1, -1, -1):
+		heapify(A, N, i)
+	
+	#keep swapping the largest
+	for i in range(N-1, -1, -1):
+		A[0], A[i] = A[i], A[0]
 		heapify(A, i, 0)
 
 
-
-A = [21, 4, 1, 3, 9, 20, 25, 6, 21, 14]
+A = [12, 11, 13, 5, 6, 7]
 heapSort(A)
-print A
+print(A)
 
-"""
-Time Complexity O(NLogN) in best, average, worst case.
-Space Complexity O(1)
-"""
+A = [1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17]
+heapSort(A)
+print(A)
