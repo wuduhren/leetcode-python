@@ -38,3 +38,27 @@ class Solution:
                     j += 1
                     
         return ans
+
+
+"""
+No Sort.
+Use set to dedupe and check needed.
+
+Time: O(N^2)
+Space: O(N)
+"""
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        ans = set()
+        seen = set()
+        N = len(nums)
+        
+        for i, v1 in enumerate(nums):
+            if v1 in seen: continue
+            seen.add(v1)
+            needed = set()
+            for j, v2 in enumerate(nums[i+1:]):
+                if v2 in needed:
+                    ans.add(tuple(sorted((v1, v2, -v1-v2))))
+                needed.add(-v1-v2)
+        return ans
