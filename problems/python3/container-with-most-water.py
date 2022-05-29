@@ -23,3 +23,20 @@ class Solution:
             else:
                 i += 1
         return ans
+
+
+
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        i = 0
+        j = len(height)-1
+        ans = 0
+        
+        while i<j:
+            ans = max(ans, min(height[i], height[j]) * abs(i-j))
+            
+            if height[i]>height[j]:
+                j -= 1
+            else:
+                i += 1
+        return ans
