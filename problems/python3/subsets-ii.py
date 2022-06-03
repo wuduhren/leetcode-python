@@ -1,3 +1,7 @@
+"""
+Time: O(N * 2^N)
+Space: O(N)
+"""
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
         def helper(i):
