@@ -1,3 +1,16 @@
+"""
+Try to find a i on array A and corespoding j on array B.
+
+Aleft = A[i]
+Aright = A[i+1]
+Bleft = B[j]
+Bright = B[j+1]
+
+Such that Aleft<=Bright and Bleft<=Aright
+
+This means that A[:i+1] and B[:j+1] holds all the elements that is less than the median.
+Aright A[i+1:] and B[j+1:] holds all the elements that is larger or equal to the median.
+"""
 class Solution:
     def findMedianSortedArrays(self, A: List[int], B: List[int]) -> float:
         if len(A)>len(B): A, B = B, A
